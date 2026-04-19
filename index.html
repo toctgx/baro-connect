@@ -38,6 +38,7 @@
       gap: 8px;
       height: 42px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      position: relative;
     }
     .search-wrap input {
       flex: 1; border: none; outline: none;
@@ -45,6 +46,47 @@
     }
     .search-wrap input::placeholder { color: #aaa; }
     .search-icon { font-size: 16px; color: #aaa; }
+
+    /* 최근 검색어 드롭다운 */
+    .recent-search-dropdown {
+      display: none;
+      position: absolute;
+      top: calc(100% + 4px);
+      left: 0; right: 0;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+      z-index: 100;
+      overflow: hidden;
+    }
+    .recent-search-dropdown.show { display: block; }
+    .recent-search-header {
+      font-size: 11px;
+      color: var(--sub);
+      font-weight: 600;
+      padding: 10px 14px 6px;
+    }
+    .recent-search-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 14px;
+      cursor: pointer;
+      font-size: 13px;
+      color: var(--text);
+      transition: background 0.1s;
+    }
+    .recent-search-item:hover { background: var(--bg); }
+    .recent-search-icon { font-size: 13px; color: var(--sub); }
+    .recent-search-del {
+      margin-left: auto;
+      font-size: 14px;
+      color: #ccc;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0 2px;
+    }
 
     /* 카테고리 탭 */
     .cat-row {
@@ -102,6 +144,7 @@
       gap: 12px;
       cursor: pointer;
       transition: box-shadow 0.15s;
+      position: relative;
     }
     .contact-card:active { box-shadow: 0 2px 12px rgba(0,0,0,0.1); }
     .contact-icon {
@@ -110,7 +153,19 @@
       display: flex; align-items: center; justify-content: center;
       font-size: 20px;
       flex: 0 0 auto;
+      position: relative;
     }
+    /* 운영 상태 도트 */
+    .open-dot {
+      position: absolute;
+      bottom: -2px; right: -2px;
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+    }
+    .open-dot.open { background: var(--green); }
+    .open-dot.closed { background: var(--red); }
+
     .contact-info { flex: 1; min-width: 0; }
     .contact-name { font-size: 14px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     .contact-sub { font-size: 11px; color: var(--sub); margin-top: 2px; }
@@ -170,6 +225,7 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
+      text-decoration: none;
     }
     .ars-tip {
       background: #fff8e1;
@@ -194,13 +250,13 @@
     .empty { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 0; color: var(--sub); font-size: 13px; gap: 8px; }
     .empty-icon { font-size: 40px; }
 
-    /* 하단 탭바 */
+    /* 하단 탭바 — 4개 */
     .tab-bar {
       flex: 0 0 auto;
       background: var(--card);
       border-top: 1px solid var(--border);
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       padding: 6px 0 max(6px, env(safe-area-inset-bottom));
     }
     .tab-btn {
@@ -211,12 +267,151 @@
     .tab-btn.active { color: var(--primary); }
     .tab-icon { font-size: 20px; }
 
-    /* 즐겨찾기 */
+    /* 즐겨찾기 버튼 */
     .fav-btn {
       position: absolute; top: 12px; right: 12px;
       background: none; border: none; font-size: 18px; cursor: pointer; padding: 4px;
     }
-    .contact-card { position: relative; }
+
+    /* ===== 번호 제보 모달 ===== */
+    .report-backdrop {
+      display: none;
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 300;
+      align-items: flex-end;
+    }
+    .report-backdrop.show { display: flex; }
+    .report-modal {
+      background: var(--card);
+      border-radius: 20px 20px 0 0;
+      padding: 20px;
+      width: 100%;
+      max-height: 85vh;
+      overflow-y: auto;
+      animation: slideUp 0.3s ease;
+    }
+    @keyframes slideUp {
+      from { transform: translateY(100%); }
+      to { transform: translateY(0); }
+    }
+    .report-modal h2 {
+      font-size: 18px; font-weight: 800; margin-bottom: 4px;
+    }
+    .report-modal p {
+      font-size: 13px; color: var(--sub); margin-bottom: 18px;
+    }
+    .form-group {
+      margin-bottom: 14px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 12px; font-weight: 600; color: var(--sub);
+      margin-bottom: 6px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 11px 12px;
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      font-size: 14px;
+      font-family: inherit;
+      color: var(--text);
+      background: var(--bg);
+      outline: none;
+      transition: border-color 0.15s;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--primary);
+      background: #fff;
+    }
+    .form-group textarea { resize: none; height: 80px; }
+    .report-submit-btn {
+      width: 100%;
+      padding: 15px;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: 14px;
+      font-size: 16px;
+      font-weight: 800;
+      cursor: pointer;
+      font-family: inherit;
+      margin-top: 8px;
+    }
+    .report-close-btn {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      background: none;
+      border: none;
+      color: var(--sub);
+      font-size: 14px;
+      font-family: inherit;
+      cursor: pointer;
+      margin-top: 6px;
+    }
+
+    /* 토스트 */
+    .toast {
+      position: fixed;
+      bottom: 90px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: #333;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 24px;
+      font-size: 13px;
+      font-weight: 600;
+      opacity: 0;
+      transition: all 0.3s;
+      z-index: 500;
+      white-space: nowrap;
+    }
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* 최근 통화 히스토리 카드 */
+    .history-card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 14px;
+      margin-bottom: 8px;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .history-icon {
+      width: 42px; height: 42px;
+      border-radius: 12px;
+      background: #e8f5e9;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+      flex: 0 0 auto;
+    }
+    .history-info { flex: 1; min-width: 0; }
+    .history-name { font-size: 14px; font-weight: 700; }
+    .history-tel { font-size: 13px; color: var(--primary); font-weight: 600; margin-top: 2px; }
+    .history-time { font-size: 11px; color: var(--sub); margin-top: 2px; }
+    .history-call-btn {
+      flex: 0 0 auto;
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: var(--green);
+      border: none;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(52,168,83,0.3);
+    }
   </style>
 </head>
 <body>
@@ -224,9 +419,10 @@
   <div class="header">
     <div class="header-title">📞 바로연결</div>
     <div class="header-sub">고객센터 번호 즉시 찾기</div>
-    <div class="search-wrap">
+    <div class="search-wrap" id="searchWrap">
       <span class="search-icon">🔍</span>
-      <input type="text" id="searchInput" placeholder="기관명, 번호, 서비스 검색..." />
+      <input type="text" id="searchInput" placeholder="기관명, 번호, 서비스 검색..." autocomplete="off" />
+      <div class="recent-search-dropdown" id="recentDropdown"></div>
     </div>
   </div>
 
@@ -239,13 +435,16 @@
   </div>
 
   <div class="tab-bar">
-    <button class="tab-btn active" onclick="showTab('home')">
+    <button class="tab-btn active" data-tab="home" onclick="showTab('home')">
       <span class="tab-icon">🏠</span>전체
     </button>
-    <button class="tab-btn" onclick="showTab('fav')">
+    <button class="tab-btn" data-tab="fav" onclick="showTab('fav')">
       <span class="tab-icon">⭐</span>즐겨찾기
     </button>
-    <button class="tab-btn" onclick="showTab('suggest')">
+    <button class="tab-btn" data-tab="history" onclick="showTab('history')">
+      <span class="tab-icon">📋</span>최근통화
+    </button>
+    <button class="tab-btn" data-tab="suggest" onclick="showTab('suggest')">
       <span class="tab-icon">➕</span>번호제보
     </button>
   </div>
@@ -259,9 +458,60 @@
   </div>
 </div>
 
+<!-- 번호 제보 모달 -->
+<div class="report-backdrop" id="reportBackdrop" onclick="closeReport(event)">
+  <div class="report-modal" id="reportModal">
+    <div class="modal-handle"></div>
+    <h2>번호 제보하기</h2>
+    <p>없는 번호를 알려주시면 검토 후 추가할게요!</p>
+
+    <div class="form-group">
+      <label>기관/기업명 *</label>
+      <input type="text" id="reportName" placeholder="예: 국민건강보험공단" />
+    </div>
+    <div class="form-group">
+      <label>전화번호 *</label>
+      <input type="tel" id="reportTel" placeholder="예: 1588-1234" />
+    </div>
+    <div class="form-group">
+      <label>카테고리 *</label>
+      <select id="reportCat">
+        <option value="">선택하세요</option>
+        <option>관공서</option>
+        <option>공공기관</option>
+        <option>금융</option>
+        <option>IT전자</option>
+        <option>쇼핑</option>
+        <option>택배</option>
+        <option>항공</option>
+        <option>자동차</option>
+        <option>외국계기업</option>
+        <option>대기업</option>
+        <option>지자체</option>
+        <option>의료</option>
+        <option>교육</option>
+        <option>법률</option>
+        <option>기타</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>ARS 단축번호 안내 <span style="color:#aaa;font-weight:400;">(선택)</span></label>
+      <textarea id="reportArs" placeholder="예: 1번 상담원 연결, 2번 청구서 문의..."></textarea>
+    </div>
+
+    <button class="report-submit-btn" onclick="submitReport()">제보하기</button>
+    <button class="report-close-btn" onclick="closeReportModal()">닫기</button>
+  </div>
+</div>
+
+<!-- 토스트 -->
+<div class="toast" id="toast"></div>
+
 <script>
 let allContacts = [];
 let favorites = JSON.parse(localStorage.getItem('baro-favorites') || '[]');
+let callHistory = JSON.parse(localStorage.getItem('baro-callhistory') || '[]');
+let recentSearches = JSON.parse(localStorage.getItem('baro-recentsearch') || '[]');
 let currentCat = 'ALL';
 let currentTab = 'home';
 let searchQ = '';
@@ -298,6 +548,22 @@ const CAT_COLORS = {
   '식품': '#d4e157',
 };
 
+// ===== 운영시간 체크 =====
+function isOpen(hours) {
+  if (!hours) return null;
+  if (hours.includes('24')) return true;
+  if (hours.includes('평일')) {
+    const now = new Date();
+    const day = now.getDay(); // 0=일, 6=토
+    if (day === 0 || day === 6) return false;
+    const h = now.getHours(), m = now.getMinutes();
+    const totalMin = h * 60 + m;
+    return totalMin >= 9 * 60 && totalMin < 18 * 60;
+  }
+  return null; // 판별 불가
+}
+
+// ===== 데이터 로드 =====
 async function loadData() {
   const res = await fetch('contacts_v1.json');
   allContacts = await res.json();
@@ -321,7 +587,13 @@ function selectCat(cat) {
   render();
 }
 
+// ===== 렌더링 =====
 function render() {
+  if (currentTab === 'history') {
+    renderHistory();
+    return;
+  }
+
   let list = allContacts;
   if (currentTab === 'fav') list = list.filter(c => favorites.includes(c.id));
   if (currentCat !== 'ALL') list = list.filter(c => c.category === currentCat);
@@ -347,34 +619,102 @@ function render() {
   }
 
   const isFav = id => favorites.includes(id);
-  document.getElementById('contactList').innerHTML = list.map(c => `
+  document.getElementById('contactList').innerHTML = list.map(c => {
+    const openStatus = isOpen(c.hours);
+    const dotHtml = openStatus !== null
+      ? `<div class="open-dot ${openStatus ? 'open' : 'closed'}"></div>`
+      : '';
+    return `
     <div class="contact-card" onclick="openDetail('${c.id}')">
       <div class="contact-icon" style="background:${(CAT_COLORS[c.category] || '#e0e0e0')}22;">
         ${CAT_ICONS[c.category] || '📞'}
+        ${dotHtml}
       </div>
       <div class="contact-info">
         <div class="contact-name">${c.name}</div>
         <div class="contact-sub">${c.category} · ${c.subcategory}</div>
         <div class="contact-tel">${c.tel}</div>
       </div>
-      <a class="call-btn" href="tel:${c.tel.replace(/[^0-9+]/g,'')}" onclick="event.stopPropagation()">📞</a>
+      <a class="call-btn" href="tel:${c.tel.replace(/[^0-9+]/g,'')}" onclick="event.stopPropagation();recordCall('${c.id}')">📞</a>
       <button class="fav-btn" onclick="toggleFav(event,'${c.id}')">${isFav(c.id) ? '⭐' : '☆'}</button>
     </div>
-  `).join('');
+  `;
+  }).join('');
 }
 
+// ===== 최근 통화 히스토리 렌더 =====
+function renderHistory() {
+  document.getElementById('resultCount').textContent = `최근 통화 ${callHistory.length}건`;
+
+  if (!callHistory.length) {
+    document.getElementById('contactList').innerHTML = `
+      <div class="empty">
+        <div class="empty-icon">📋</div>
+        <div>아직 통화 기록이 없어요</div>
+      </div>`;
+    return;
+  }
+
+  // 최신 순, 중복 허용
+  const items = callHistory.slice().reverse();
+  document.getElementById('contactList').innerHTML = items.map(h => {
+    const c = allContacts.find(x => x.id === h.id);
+    const name = c ? c.name : h.name;
+    const tel = c ? c.tel : h.tel;
+    const timeStr = formatTime(h.ts);
+    return `
+    <div class="history-card">
+      <div class="history-icon">📞</div>
+      <div class="history-info">
+        <div class="history-name">${name}</div>
+        <div class="history-tel">${tel}</div>
+        <div class="history-time">${timeStr}</div>
+      </div>
+      <a class="history-call-btn" href="tel:${tel.replace(/[^0-9+]/g,'')}">📞</a>
+    </div>
+  `;
+  }).join('');
+}
+
+function formatTime(ts) {
+  const d = new Date(ts);
+  const now = new Date();
+  const diff = now - d;
+  const min = Math.floor(diff / 60000);
+  if (min < 1) return '방금 전';
+  if (min < 60) return `${min}분 전`;
+  const h = Math.floor(min / 60);
+  if (h < 24) return `${h}시간 전`;
+  const day = Math.floor(h / 24);
+  return `${day}일 전`;
+}
+
+// ===== 통화 기록 =====
+function recordCall(id) {
+  const c = allContacts.find(x => x.id === id);
+  if (!c) return;
+  callHistory.push({ id, name: c.name, tel: c.tel, ts: Date.now() });
+  // 최대 50개
+  if (callHistory.length > 50) callHistory = callHistory.slice(-50);
+  localStorage.setItem('baro-callhistory', JSON.stringify(callHistory));
+}
+
+// ===== 상세 모달 =====
 function openDetail(id) {
   const c = allContacts.find(x => x.id === id);
   if (!c) return;
   const isFav = favorites.includes(id);
   const hoursClass = c.hours.includes('24') ? 'hours-24' : 'hours-weekday';
+  const openStatus = isOpen(c.hours);
+  const openLabel = openStatus === true ? '🟢 운영중' : openStatus === false ? '🔴 운영시간 외' : '';
+
   document.getElementById('modalContent').innerHTML = `
     <div style="display:flex;justify-content:space-between;align-items:flex-start;">
       <div>
         <div class="modal-name">${c.name}</div>
         <div class="modal-cat">${c.category} · ${c.subcategory}</div>
       </div>
-      <button onclick="toggleFav(event,'${c.id}');document.getElementById('modalContent').querySelector('.fav-big').textContent=favorites.includes('${c.id}')?'⭐':'☆'" style="font-size:24px;background:none;border:none;cursor:pointer;" class="fav-big">${isFav ? '⭐' : '☆'}</button>
+      <button onclick="toggleFav(event,'${c.id}');this.textContent=favorites.includes('${c.id}')?'⭐':'☆'" style="font-size:24px;background:none;border:none;cursor:pointer;">${isFav ? '⭐' : '☆'}</button>
     </div>
     <div class="modal-row">
       <div class="modal-row-icon">📞</div>
@@ -386,12 +726,12 @@ function openDetail(id) {
     <div class="modal-row">
       <div class="modal-row-icon">🕐</div>
       <div>
-        <div class="modal-row-label">운영시간</div>
+        <div class="modal-row-label">운영시간 ${openLabel}</div>
         <div class="modal-row-val"><span class="hours-badge ${hoursClass}">${c.hours}</span></div>
       </div>
     </div>
     ${c.ars ? `<div class="ars-tip">💡 ARS 단축 안내<br>${c.ars.split('/').join('<br>')}</div>` : ''}
-    <a class="modal-call-btn" href="tel:${c.tel.replace(/[^0-9+]/g,'')}">
+    <a class="modal-call-btn" href="tel:${c.tel.replace(/[^0-9+]/g,'')}" onclick="recordCall('${c.id}')">
       📞 지금 전화하기
     </a>
   `;
@@ -403,6 +743,7 @@ function closeModal(e) {
     document.getElementById('modalBackdrop').classList.remove('show');
 }
 
+// ===== 즐겨찾기 =====
 function toggleFav(e, id) {
   e.stopPropagation();
   if (favorites.includes(id)) favorites = favorites.filter(f => f !== id);
@@ -411,23 +752,143 @@ function toggleFav(e, id) {
   render();
 }
 
+// ===== 탭 전환 =====
 function showTab(tab) {
   currentTab = tab;
-  document.querySelectorAll('.tab-btn').forEach((b, i) => {
-    b.classList.toggle('active', ['home','fav','suggest'][i] === tab);
+  document.querySelectorAll('.tab-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.tab === tab);
   });
+
   if (tab === 'suggest') {
-    alert('번호 제보 기능은 준비 중이에요!\n이메일로 제보해주세요 😊');
-    currentTab = 'home';
-    document.querySelectorAll('.tab-btn')[0].classList.add('active');
-    document.querySelectorAll('.tab-btn')[2].classList.remove('active');
+    // 탭을 'suggest' 상태 유지, 모달 열기
+    openReportModal();
+    return;
   }
   render();
 }
 
-document.getElementById('searchInput').addEventListener('input', e => {
-  searchQ = e.target.value.trim();
+// ===== 번호 제보 모달 =====
+function openReportModal() {
+  document.getElementById('reportBackdrop').classList.add('show');
+}
+
+function closeReportModal() {
+  document.getElementById('reportBackdrop').classList.remove('show');
+  // 탭을 home으로 되돌리기
+  currentTab = 'home';
+  document.querySelectorAll('.tab-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.tab === 'home');
+  });
+}
+
+function closeReport(e) {
+  if (e.target === document.getElementById('reportBackdrop')) closeReportModal();
+}
+
+function submitReport() {
+  const name = document.getElementById('reportName').value.trim();
+  const tel = document.getElementById('reportTel').value.trim();
+  const cat = document.getElementById('reportCat').value;
+  const ars = document.getElementById('reportArs').value.trim();
+
+  if (!name || !tel || !cat) {
+    showToast('기관명, 전화번호, 카테고리를 입력해주세요');
+    return;
+  }
+
+  // localStorage에 저장
+  const reports = JSON.parse(localStorage.getItem('baro-reports') || '[]');
+  reports.push({ name, tel, cat, ars, ts: Date.now() });
+  localStorage.setItem('baro-reports', JSON.stringify(reports));
+
+  // 폼 초기화
+  document.getElementById('reportName').value = '';
+  document.getElementById('reportTel').value = '';
+  document.getElementById('reportCat').value = '';
+  document.getElementById('reportArs').value = '';
+
+  closeReportModal();
+  showToast('제보해주셔서 감사합니다! 🙏');
+}
+
+// ===== 토스트 =====
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2500);
+}
+
+// ===== 최근 검색어 =====
+function saveSearch(q) {
+  if (!q) return;
+  recentSearches = recentSearches.filter(s => s !== q);
+  recentSearches.unshift(q);
+  recentSearches = recentSearches.slice(0, 5); // 최대 5개 저장
+  localStorage.setItem('baro-recentsearch', JSON.stringify(recentSearches));
+}
+
+function deleteRecentSearch(q) {
+  recentSearches = recentSearches.filter(s => s !== q);
+  localStorage.setItem('baro-recentsearch', JSON.stringify(recentSearches));
+  showRecentDropdown();
+}
+
+function showRecentDropdown() {
+  const dropdown = document.getElementById('recentDropdown');
+  const top3 = recentSearches.slice(0, 3);
+  if (!top3.length) {
+    dropdown.classList.remove('show');
+    return;
+  }
+  dropdown.innerHTML = `
+    <div class="recent-search-header">최근 검색어</div>
+    ${top3.map(q => `
+      <div class="recent-search-item" onclick="applyRecentSearch('${q.replace(/'/g,"\\'")}')">
+        <span class="recent-search-icon">🕐</span>
+        <span>${q}</span>
+        <button class="recent-search-del" onclick="event.stopPropagation();deleteRecentSearch('${q.replace(/'/g,"\\'")}')">✕</button>
+      </div>
+    `).join('')}
+  `;
+  dropdown.classList.add('show');
+}
+
+function applyRecentSearch(q) {
+  document.getElementById('searchInput').value = q;
+  searchQ = q;
+  document.getElementById('recentDropdown').classList.remove('show');
   render();
+}
+
+// ===== 이벤트 리스너 =====
+const searchInput = document.getElementById('searchInput');
+
+searchInput.addEventListener('focus', () => {
+  if (recentSearches.length) showRecentDropdown();
+});
+
+searchInput.addEventListener('input', e => {
+  searchQ = e.target.value.trim();
+  document.getElementById('recentDropdown').classList.remove('show');
+  render();
+});
+
+searchInput.addEventListener('keydown', e => {
+  if (e.key === 'Enter' && searchQ) {
+    saveSearch(searchQ);
+    document.getElementById('recentDropdown').classList.remove('show');
+    searchInput.blur();
+  }
+});
+
+// 검색창 외부 클릭 시 드롭다운 닫기
+document.addEventListener('click', e => {
+  if (!document.getElementById('searchWrap').contains(e.target)) {
+    document.getElementById('recentDropdown').classList.remove('show');
+    // 검색 실행 후 저장
+    if (searchQ) saveSearch(searchQ);
+  }
 });
 
 loadData();
