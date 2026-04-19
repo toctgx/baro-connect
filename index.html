@@ -759,8 +759,10 @@ function showTab(tab) {
     b.classList.toggle('active', b.dataset.tab === tab);
   });
 
+  // 카테고리 칩은 전체(home) 탭에서만 표시
+  document.getElementById('catRow').style.display = tab === 'home' ? 'flex' : 'none';
+
   if (tab === 'suggest') {
-    // 탭을 'suggest' 상태 유지, 모달 열기
     openReportModal();
     return;
   }
