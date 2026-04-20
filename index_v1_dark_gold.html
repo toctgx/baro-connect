@@ -8,19 +8,18 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --bg: #e8e8e8;
-      --surface: #efefef;
-      --surface-raised: #f5f5f5;
-      --white: #ffffff;
+      --bg: #0d0d0d;
+      --surface: #1e1e1e;
+      --surface2: #141414;
+      --surface3: #2a2a2a;
       --accent: #f0b400;
       --accent2: #f0d23c;
-      --text: #2d2d2d;
-      --text2: #888888;
-      --text3: #aaaaaa;
-      --shadow-dark: rgba(0,0,0,0.15);
-      --shadow-light: rgba(255,255,255,0.9);
-      --green: #34c759;
-      --red: #ff3b30;
+      --blue: #1e3cd2;
+      --green: #1ed25a;
+      --red: #ef4444;
+      --text: #f0f0f0;
+      --text2: #969696;
+      --border: #2f2f2f;
     }
     html, body {
       height: 100%;
@@ -38,9 +37,17 @@
     /* ── 헤더 ── */
     .header {
       flex: 0 0 auto;
-      background: var(--bg);
-      padding: 16px;
+      background: var(--surface2);
+      padding: 14px 16px 12px;
       position: relative;
+    }
+    .header::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 1.5px;
+      background: linear-gradient(90deg, #f0b400, transparent);
     }
     .header-top {
       display: flex;
@@ -48,45 +55,39 @@
       justify-content: space-between;
     }
     .header-left { display: flex; flex-direction: column; gap: 2px; }
-    .header-title-row { display: flex; align-items: center; gap: 10px; }
-    .header-icon {
-      font-size: 32px;
-      filter: sepia(1) saturate(4) hue-rotate(5deg);
-      line-height: 1;
-    }
-    .header-text { display: flex; flex-direction: column; gap: 1px; }
+    .header-title-row { display: flex; align-items: center; gap: 8px; }
+    .header-icon { font-size: 22px; filter: sepia(1) saturate(4) hue-rotate(5deg); }
     .header-title { color: var(--text); font-size: 20px; font-weight: 800; letter-spacing: -0.5px; }
-    .header-sub { color: var(--text2); font-size: 12px; font-weight: 500; }
+    .header-sub { color: var(--accent); font-size: 12px; font-weight: 600; padding-left: 30px; }
     .header-badge {
-      background: var(--bg);
-      box-shadow: inset 3px 3px 7px rgba(0,0,0,0.1), inset -2px -2px 6px rgba(255,255,255,0.85);
-      color: var(--accent);
+      background: var(--accent);
+      color: #000;
       font-size: 11px;
       font-weight: 700;
-      padding: 6px 12px;
+      padding: 4px 10px;
       border-radius: 20px;
       white-space: nowrap;
     }
 
     /* ── 검색창 ── */
     .search-wrap {
-      margin-top: 14px;
+      margin-top: 12px;
       display: flex;
       align-items: center;
-      background: var(--bg);
-      box-shadow: inset 3px 3px 8px rgba(0,0,0,0.1), inset -2px -2px 6px rgba(255,255,255,0.9);
-      border-radius: 16px;
+      background: var(--surface);
+      border: 1.5px solid var(--border);
+      border-radius: 14px;
       padding: 0 12px;
       gap: 8px;
-      height: 48px;
+      height: 44px;
       position: relative;
-      transition: outline 0.2s ease;
-      outline: 2px solid transparent;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
     }
     .search-wrap:focus-within {
-      outline: 2px solid var(--accent);
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(240,180,0,0.2);
     }
-    .search-icon { font-size: 16px; color: var(--text2); flex: 0 0 auto; }
+    .search-icon { font-size: 16px; color: var(--accent); flex: 0 0 auto; }
     .search-wrap input {
       flex: 1;
       border: none;
@@ -96,31 +97,30 @@
       color: var(--text);
       background: transparent;
     }
-    .search-wrap input::placeholder { color: var(--text3); }
+    .search-wrap input::placeholder { color: var(--text2); }
     .filter-btn {
-      background: var(--bg);
-      box-shadow: 4px 4px 8px rgba(0,0,0,0.1), -3px -3px 7px rgba(255,255,255,0.85);
-      border: none;
-      border-radius: 10px;
-      font-size: 15px;
+      background: var(--surface3);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 16px;
       cursor: pointer;
-      padding: 5px 8px;
+      padding: 4px 8px;
+      color: var(--text2);
       flex: 0 0 auto;
-      transition: all 0.2s ease;
+      transition: color 0.2s ease, background 0.2s ease;
     }
-    .filter-btn:active {
-      box-shadow: inset 2px 2px 5px rgba(0,0,0,0.1), inset -2px -2px 5px rgba(255,255,255,0.85);
-    }
+    .filter-btn:hover { color: var(--accent); background: #333; }
 
     /* 최근 검색어 드롭다운 */
     .recent-search-dropdown {
       display: none;
       position: absolute;
-      top: calc(100% + 8px);
+      top: calc(100% + 6px);
       left: 0; right: 0;
       background: var(--surface);
-      box-shadow: 6px 6px 16px rgba(0,0,0,0.12), -4px -4px 12px rgba(255,255,255,0.85);
-      border-radius: 16px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.6);
       z-index: 100;
       overflow: hidden;
     }
@@ -143,12 +143,12 @@
       color: var(--text);
       transition: background 0.2s ease;
     }
-    .recent-search-item:hover { background: rgba(0,0,0,0.04); }
+    .recent-search-item:hover { background: var(--surface3); }
     .recent-search-icon { font-size: 13px; color: var(--text2); }
     .recent-search-del {
       margin-left: auto;
-      font-size: 13px;
-      color: var(--text3);
+      font-size: 14px;
+      color: var(--text2);
       background: none;
       border: none;
       cursor: pointer;
@@ -159,41 +159,42 @@
     .cat-row {
       flex: 0 0 auto;
       display: flex;
-      gap: 8px;
-      padding: 0 12px 12px;
+      gap: 6px;
+      padding: 10px 12px;
       overflow-x: auto;
       background: var(--bg);
+      border-bottom: 1px solid var(--border);
     }
     .cat-chip {
       flex: 0 0 auto;
-      padding: 7px 14px;
+      padding: 6px 13px;
       border-radius: 20px;
       font-size: 12px;
       font-weight: 600;
-      border: none;
+      border: 1.5px solid var(--border);
       color: var(--text2);
       background: var(--surface);
-      box-shadow: 4px 4px 8px rgba(0,0,0,0.09), -3px -3px 7px rgba(255,255,255,0.85);
       cursor: pointer;
       font-family: inherit;
       white-space: nowrap;
       transition: all 0.2s ease;
     }
     .cat-chip.active {
-      box-shadow: inset 2px 2px 6px rgba(0,0,0,0.1), inset -2px -2px 6px rgba(255,255,255,0.85);
-      color: var(--accent);
-      background: var(--surface-raised);
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #000;
       font-weight: 700;
     }
     .cat-chip:hover:not(.active) {
-      box-shadow: 6px 6px 12px rgba(0,0,0,0.12), -4px -4px 10px rgba(255,255,255,0.9);
+      border-color: var(--accent);
+      color: var(--text);
     }
 
     /* ── 스크롤 영역 ── */
     .scroll-area {
       flex: 1 1 auto;
       overflow-y: auto;
-      padding: 6px 12px;
+      padding: 10px 12px;
       -webkit-overflow-scrolling: touch;
       background: var(--bg);
     }
@@ -202,53 +203,45 @@
     .result-count {
       font-size: 12px;
       color: var(--text2);
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       padding: 0 2px;
     }
 
     /* ── 연락처 카드 ── */
-    .contact-list { display: flex; flex-direction: column; }
+    .contact-list { display: flex; flex-direction: column; gap: 2px; }
     .contact-card {
       background: var(--surface);
-      border-radius: 20px;
-      padding: 14px 14px;
-      border: none;
-      box-shadow: 4px 4px 10px rgba(0,0,0,0.1), -3px -3px 8px rgba(255,255,255,0.8);
+      border-radius: 14px;
+      padding: 13px 14px;
+      border: 1px solid var(--border);
+      border-left: 3px solid transparent;
       display: flex;
       align-items: center;
       gap: 12px;
       cursor: pointer;
-      transition: all 0.2s ease;
+      transition: background 0.2s ease, border-color 0.2s ease, border-left-color 0.2s ease;
       position: relative;
-      margin-bottom: 10px;
     }
-    .contact-card:hover {
-      box-shadow: 7px 7px 15px rgba(0,0,0,0.13), -5px -5px 12px rgba(255,255,255,0.9);
-      transform: scale(1.01);
+    .contact-card:hover, .contact-card:active {
+      background: #252525;
+      border-left-color: var(--accent);
     }
-    .contact-card:active {
-      box-shadow: inset 3px 3px 8px rgba(0,0,0,0.12), inset -3px -3px 8px rgba(255,255,255,0.85);
-      transform: scale(1);
-    }
-
-    /* 아이콘 */
     .contact-icon {
-      width: 52px; height: 52px;
+      width: 44px; height: 44px;
       border-radius: 50%;
-      background: var(--bg);
-      box-shadow: 4px 4px 8px rgba(0,0,0,0.1), -3px -3px 7px rgba(255,255,255,0.85);
+      background: var(--surface3);
       display: flex; align-items: center; justify-content: center;
-      font-size: 22px;
+      font-size: 20px;
       flex: 0 0 auto;
       position: relative;
     }
     /* 운영 상태 도트 */
     .open-dot {
       position: absolute;
-      bottom: 2px; right: 2px;
-      width: 10px; height: 10px;
+      bottom: 1px; right: 1px;
+      width: 9px; height: 9px;
       border-radius: 50%;
-      border: 2px solid var(--bg);
+      border: 2px solid var(--surface);
     }
     .open-dot.open { background: var(--green); }
     .open-dot.closed { background: var(--red); }
@@ -263,42 +256,34 @@
 
     .call-btn {
       flex: 0 0 auto;
-      width: 44px; height: 44px;
+      width: 40px; height: 40px;
       border-radius: 50%;
       background: linear-gradient(135deg, #f0b400, #f0d23c);
-      box-shadow: 4px 4px 10px rgba(0,0,0,0.12), -3px -3px 8px rgba(255,255,255,0.8);
       border: none;
       cursor: pointer;
       display: flex; align-items: center; justify-content: center;
       font-size: 18px;
-      transition: all 0.2s ease;
+      box-shadow: 0 2px 10px rgba(240,180,0,0.3);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
       text-decoration: none;
+      filter: grayscale(0);
     }
     .call-btn:active {
-      box-shadow: inset 3px 3px 7px rgba(0,0,0,0.15), inset -2px -2px 6px rgba(255,255,255,0.5);
-      transform: scale(0.95);
+      transform: scale(0.9);
+      box-shadow: 0 1px 5px rgba(240,180,0,0.2);
     }
-    .call-btn-icon { font-size: 18px; filter: brightness(0) invert(1); }
+    /* 전화 아이콘 어둡게 */
+    .call-btn-icon { font-size: 18px; filter: brightness(0); }
 
     /* 즐겨찾기 버튼 */
     .fav-btn {
       position: absolute; top: 10px; right: 10px;
-      width: 26px; height: 26px;
-      border-radius: 50%;
-      background: var(--bg);
-      box-shadow: 3px 3px 6px rgba(0,0,0,0.1), -2px -2px 5px rgba(255,255,255,0.85);
-      border: none;
-      font-size: 13px;
-      cursor: pointer;
-      display: flex; align-items: center; justify-content: center;
-      color: var(--text3);
-      transition: all 0.2s ease;
+      background: none; border: none; font-size: 16px; cursor: pointer; padding: 4px;
+      color: #555;
+      transition: transform 0.2s ease, color 0.2s ease;
     }
     .fav-btn.active { color: var(--accent); }
-    .fav-btn:active {
-      box-shadow: inset 2px 2px 4px rgba(0,0,0,0.1), inset -1px -1px 4px rgba(255,255,255,0.85);
-      transform: scale(0.95);
-    }
+    .fav-btn:active { transform: scale(1.2); }
 
     /* 빈 상태 */
     .empty {
@@ -313,21 +298,20 @@
     .modal-backdrop {
       display: none;
       position: fixed; inset: 0;
-      background: rgba(0,0,0,0.4);
+      background: rgba(0,0,0,0.85);
       z-index: 200;
       align-items: flex-end;
     }
     .modal-backdrop.show { display: flex; }
     .modal {
       background: var(--surface);
-      border-radius: 24px 24px 0 0;
+      border-radius: 20px 20px 0 0;
       padding: 20px;
       width: 100%;
       max-height: 72vh;
       overflow-y: auto;
       animation: slideUp 0.3s ease;
-      box-shadow: 0 -8px 30px rgba(0,0,0,0.12), 0 -2px 8px rgba(255,255,255,0.6);
-      position: relative;
+      border-top: 1px solid var(--border);
     }
     @keyframes slideUp {
       from { transform: translateY(100%); }
@@ -335,35 +319,18 @@
     }
     .modal-handle {
       width: 36px; height: 4px;
-      background: #cccccc;
+      background: var(--border);
       border-radius: 2px;
       margin: 0 auto 18px;
-    }
-    .modal-close-btn {
-      position: absolute;
-      top: 16px; right: 16px;
-      width: 32px; height: 32px;
-      border-radius: 50%;
-      background: var(--bg);
-      box-shadow: 3px 3px 7px rgba(0,0,0,0.1), -2px -2px 6px rgba(255,255,255,0.85);
-      border: none;
-      font-size: 14px;
-      cursor: pointer;
-      display: flex; align-items: center; justify-content: center;
-      color: var(--text2);
-      transition: all 0.2s ease;
-    }
-    .modal-close-btn:active {
-      box-shadow: inset 2px 2px 5px rgba(0,0,0,0.1), inset -1px -1px 4px rgba(255,255,255,0.85);
     }
     .modal-name { font-size: 18px; font-weight: 800; color: var(--text); margin-bottom: 4px; }
     .modal-cat { font-size: 12px; color: var(--text2); margin-bottom: 16px; }
     .modal-row {
       display: flex; align-items: flex-start; gap: 10px;
       margin-bottom: 10px; padding: 12px;
-      background: var(--bg);
-      box-shadow: inset 2px 2px 6px rgba(0,0,0,0.08), inset -2px -2px 6px rgba(255,255,255,0.85);
+      background: #252525;
       border-radius: 12px;
+      border: 1px solid var(--border);
     }
     .modal-row-icon { font-size: 18px; flex: 0 0 auto; margin-top: 1px; }
     .modal-row-label { font-size: 11px; color: var(--text2); font-weight: 600; }
@@ -372,10 +339,9 @@
       width: 100%;
       padding: 15px;
       background: linear-gradient(135deg, #f0b400, #f0d23c);
-      box-shadow: 5px 5px 12px rgba(0,0,0,0.12), -3px -3px 8px rgba(255,255,255,0.7);
-      color: #fff;
+      color: #000;
       border: none;
-      border-radius: 16px;
+      border-radius: 14px;
       font-size: 16px;
       font-weight: 800;
       cursor: pointer;
@@ -386,12 +352,10 @@
       justify-content: center;
       gap: 8px;
       text-decoration: none;
-      transition: all 0.2s ease;
+      box-shadow: 0 4px 15px rgba(240,180,0,0.3);
+      transition: opacity 0.2s ease, transform 0.2s ease;
     }
-    .modal-call-btn:active {
-      box-shadow: inset 3px 3px 8px rgba(0,0,0,0.15), inset -2px -2px 6px rgba(255,255,255,0.4);
-      transform: scale(0.98);
-    }
+    .modal-call-btn:active { opacity: 0.85; transform: scale(0.98); }
     .hours-badge {
       display: inline-block;
       padding: 3px 10px;
@@ -399,72 +363,65 @@
       font-size: 11px;
       font-weight: 700;
     }
-    .hours-24 { background: rgba(52,199,89,0.12); color: var(--green); }
-    .hours-weekday { background: rgba(30,60,210,0.1); color: #5a80e8; }
+    .hours-24 { background: rgba(30,210,90,0.15); color: var(--green); }
+    .hours-weekday { background: rgba(30,60,210,0.15); color: #6a8fef; }
     .ars-tip {
-      background: var(--bg);
-      box-shadow: inset 2px 2px 6px rgba(0,0,0,0.07), inset -2px -2px 6px rgba(255,255,255,0.85);
+      background: rgba(240,180,0,0.08);
+      border: 1px solid rgba(240,180,0,0.2);
       border-radius: 12px;
       padding: 12px 14px;
       font-size: 12px;
-      color: var(--text2);
+      color: var(--accent2);
       margin-top: 10px;
       line-height: 1.7;
     }
-    .ars-tip strong { color: var(--accent); }
 
     /* ── 하단 탭바 ── */
     .tab-bar {
       flex: 0 0 auto;
-      background: var(--bg);
-      box-shadow: 0 -4px 15px rgba(0,0,0,0.08), 0 -1px 3px rgba(255,255,255,0.9);
+      background: var(--surface2);
+      border-top: 1px solid var(--border);
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       padding-bottom: max(6px, env(safe-area-inset-bottom));
     }
     .tab-btn {
       display: flex; flex-direction: column; align-items: center; justify-content: center;
-      gap: 2px; font-size: 10px; font-weight: 600; color: var(--text3);
+      gap: 2px; font-size: 10px; font-weight: 600; color: var(--text2);
       border: none; background: none; cursor: pointer; font-family: inherit;
-      padding: 10px 0 6px;
+      padding: 8px 0 6px;
       position: relative;
       transition: color 0.2s ease;
     }
     .tab-btn.active { color: var(--accent); }
-    .tab-btn-indicator {
+    .tab-btn.active::before {
+      content: '';
       position: absolute;
-      top: 6px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 36px; height: 36px;
-      border-radius: 18px;
-      display: none;
+      top: 0; left: 20%; right: 20%;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 0 0 2px 2px;
     }
-    .tab-btn.active .tab-btn-indicator {
-      display: block;
-      box-shadow: inset 3px 3px 7px rgba(0,0,0,0.08), inset -2px -2px 6px rgba(255,255,255,0.85);
-    }
-    .tab-icon { font-size: 20px; position: relative; z-index: 1; }
-    .tab-label { position: relative; z-index: 1; }
+    .tab-icon { font-size: 20px; }
 
     /* ── 번호 제보 모달 ── */
     .report-backdrop {
       display: none;
       position: fixed; inset: 0;
-      background: rgba(0,0,0,0.4);
+      background: rgba(0,0,0,0.85);
       z-index: 300;
       align-items: flex-end;
     }
     .report-backdrop.show { display: flex; }
     .report-modal {
       background: var(--surface);
-      border-radius: 24px 24px 0 0;
+      border-radius: 20px 20px 0 0;
       padding: 20px;
       width: 100%;
       max-height: 85vh;
       overflow-y: auto;
       animation: slideUp 0.3s ease;
-      box-shadow: 0 -8px 30px rgba(0,0,0,0.12), 0 -2px 8px rgba(255,255,255,0.6);
+      border-top: 1px solid var(--border);
     }
     .report-modal h2 { font-size: 18px; font-weight: 800; color: var(--text); margin-bottom: 4px; }
     .report-modal p { font-size: 13px; color: var(--text2); margin-bottom: 18px; }
@@ -472,50 +429,46 @@
     .form-group label {
       display: block;
       font-size: 12px; font-weight: 600; color: var(--text2);
-      margin-bottom: 7px;
+      margin-bottom: 6px;
     }
     .form-group input,
     .form-group select,
     .form-group textarea {
       width: 100%;
-      padding: 12px 14px;
-      border: none;
-      border-radius: 14px;
+      padding: 11px 12px;
+      border: 1.5px solid var(--border);
+      border-radius: 12px;
       font-size: 14px;
       font-family: inherit;
       color: var(--text);
-      background: var(--bg);
-      box-shadow: inset 3px 3px 7px rgba(0,0,0,0.1), inset -2px -2px 6px rgba(255,255,255,0.9);
-      outline: 2px solid transparent;
-      transition: outline 0.2s ease;
+      background: #252525;
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
     }
     .form-group input:focus,
     .form-group select:focus,
     .form-group textarea:focus {
-      outline: 2px solid var(--accent);
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(240,180,0,0.15);
     }
-    .form-group select { appearance: none; cursor: pointer; }
     .form-group select option { background: var(--surface); color: var(--text); }
     .form-group textarea { resize: none; height: 80px; }
     .report-submit-btn {
       width: 100%;
       padding: 15px;
       background: linear-gradient(135deg, #f0b400, #f0d23c);
-      box-shadow: 5px 5px 12px rgba(0,0,0,0.12), -3px -3px 8px rgba(255,255,255,0.7);
-      color: #fff;
+      color: #000;
       border: none;
-      border-radius: 16px;
+      border-radius: 14px;
       font-size: 16px;
       font-weight: 800;
       cursor: pointer;
       font-family: inherit;
       margin-top: 8px;
-      transition: all 0.2s ease;
+      box-shadow: 0 4px 15px rgba(240,180,0,0.3);
+      transition: opacity 0.2s ease;
     }
-    .report-submit-btn:active {
-      box-shadow: inset 3px 3px 8px rgba(0,0,0,0.15), inset -2px -2px 6px rgba(255,255,255,0.4);
-      transform: scale(0.98);
-    }
+    .report-submit-btn:active { opacity: 0.85; }
     .report-close-btn {
       display: block;
       width: 100%;
@@ -535,18 +488,17 @@
       bottom: 90px;
       left: 50%;
       transform: translateX(-50%) translateY(20px);
-      background: var(--surface);
-      box-shadow: 5px 5px 14px rgba(0,0,0,0.12), -3px -3px 10px rgba(255,255,255,0.85);
-      color: var(--text);
-      border-left: 4px solid var(--accent);
-      padding: 11px 20px 11px 16px;
-      border-radius: 14px;
+      background: var(--accent);
+      color: #000;
+      padding: 10px 22px;
+      border-radius: 24px;
       font-size: 13px;
-      font-weight: 600;
+      font-weight: 700;
       opacity: 0;
       transition: all 0.3s ease;
       z-index: 500;
       white-space: nowrap;
+      box-shadow: 0 4px 16px rgba(240,180,0,0.4);
     }
     .toast.show {
       opacity: 1;
@@ -554,28 +506,26 @@
     }
 
     /* ── 최근 통화 히스토리 ── */
-    .history-list { display: flex; flex-direction: column; }
+    .history-list { display: flex; flex-direction: column; gap: 2px; }
     .history-card {
       background: var(--surface);
-      border-radius: 20px;
-      padding: 14px;
-      border: none;
-      box-shadow: 4px 4px 10px rgba(0,0,0,0.1), -3px -3px 8px rgba(255,255,255,0.8);
+      border-radius: 14px;
+      padding: 13px 14px;
+      border: 1px solid var(--border);
+      border-left: 3px solid transparent;
       display: flex;
       align-items: center;
       gap: 12px;
-      transition: all 0.2s ease;
-      margin-bottom: 10px;
+      transition: background 0.2s ease, border-left-color 0.2s ease;
     }
     .history-card:hover {
-      box-shadow: 6px 6px 14px rgba(0,0,0,0.12), -4px -4px 10px rgba(255,255,255,0.9);
-      transform: scale(1.01);
+      background: #252525;
+      border-left-color: var(--accent);
     }
     .history-icon {
-      width: 48px; height: 48px;
+      width: 44px; height: 44px;
       border-radius: 50%;
-      background: var(--bg);
-      box-shadow: 3px 3px 8px rgba(0,0,0,0.1), -2px -2px 6px rgba(255,255,255,0.85);
+      background: var(--surface3);
       display: flex; align-items: center; justify-content: center;
       font-size: 20px;
       flex: 0 0 auto;
@@ -586,20 +536,17 @@
     .history-time { font-size: 11px; color: var(--text2); margin-top: 2px; }
     .history-call-btn {
       flex: 0 0 auto;
-      width: 44px; height: 44px;
+      width: 40px; height: 40px;
       border-radius: 50%;
       background: linear-gradient(135deg, #f0b400, #f0d23c);
-      box-shadow: 4px 4px 10px rgba(0,0,0,0.12), -3px -3px 8px rgba(255,255,255,0.8);
       border: none;
       display: flex; align-items: center; justify-content: center;
       font-size: 18px;
       text-decoration: none;
-      transition: all 0.2s ease;
+      box-shadow: 0 2px 10px rgba(240,180,0,0.3);
+      transition: transform 0.2s ease;
     }
-    .history-call-btn:active {
-      box-shadow: inset 3px 3px 7px rgba(0,0,0,0.15), inset -2px -2px 6px rgba(255,255,255,0.5);
-      transform: scale(0.95);
-    }
+    .history-call-btn:active { transform: scale(0.9); }
   </style>
 </head>
 <body>
@@ -611,11 +558,9 @@
       <div class="header-left">
         <div class="header-title-row">
           <span class="header-icon">📞</span>
-          <div class="header-text">
-            <span class="header-title">바로연결</span>
-            <span class="header-sub">고객센터 즉시 찾기</span>
-          </div>
+          <span class="header-title">바로연결</span>
         </div>
+        <div class="header-sub">고객센터 즉시 찾기</div>
       </div>
       <div class="header-badge" id="totalBadge">— 개</div>
     </div>
@@ -640,24 +585,16 @@
   <!-- 하단 탭바 -->
   <div class="tab-bar">
     <button class="tab-btn active" data-tab="home" onclick="showTab('home')">
-      <div class="tab-btn-indicator"></div>
-      <span class="tab-icon">🏠</span>
-      <span class="tab-label">전체</span>
+      <span class="tab-icon">🏠</span>전체
     </button>
     <button class="tab-btn" data-tab="fav" onclick="showTab('fav')">
-      <div class="tab-btn-indicator"></div>
-      <span class="tab-icon">⭐</span>
-      <span class="tab-label">즐겨찾기</span>
+      <span class="tab-icon">⭐</span>즐겨찾기
     </button>
     <button class="tab-btn" data-tab="history" onclick="showTab('history')">
-      <div class="tab-btn-indicator"></div>
-      <span class="tab-icon">📋</span>
-      <span class="tab-label">최근통화</span>
+      <span class="tab-icon">📋</span>최근통화
     </button>
     <button class="tab-btn" data-tab="suggest" onclick="showTab('suggest')">
-      <div class="tab-btn-indicator"></div>
-      <span class="tab-icon">➕</span>
-      <span class="tab-label">번호제보</span>
+      <span class="tab-icon">➕</span>번호제보
     </button>
   </div>
 </div>
@@ -666,7 +603,6 @@
 <div class="modal-backdrop" id="modalBackdrop" onclick="closeModal(event)">
   <div class="modal" id="modal">
     <div class="modal-handle"></div>
-    <button class="modal-close-btn" onclick="document.getElementById('modalBackdrop').classList.remove('show')">✕</button>
     <div id="modalContent"></div>
   </div>
 </div>
@@ -708,7 +644,7 @@
       </select>
     </div>
     <div class="form-group">
-      <label>ARS 단축번호 안내 <span style="color:var(--text3);font-weight:400;">(선택)</span></label>
+      <label>ARS 단축번호 안내 <span style="color:var(--text2);font-weight:400;">(선택)</span></label>
       <textarea id="reportArs" placeholder="예: 1번 상담원 연결, 2번 청구서 문의..."></textarea>
     </div>
 
@@ -863,7 +799,7 @@ function renderHistory() {
         <div class="history-time">${formatTime(h.ts)}</div>
       </div>
       <a class="history-call-btn" href="tel:${tel.replace(/[^0-9+]/g,'')}">
-        <span style="font-size:18px;filter:brightness(0) invert(1);">📞</span>
+        <span style="filter:brightness(0);font-size:18px;">📞</span>
       </a>
     </div>`;
   }).join('') + `</div>`;
@@ -899,13 +835,13 @@ function openDetail(id) {
   const openLabel = openStatus === true ? '🟢 운영중' : openStatus === false ? '🔴 운영시간 외' : '';
 
   document.getElementById('modalContent').innerHTML = `
-    <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:2px;padding-right:36px;">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:2px;">
       <div>
         <div class="modal-name">${c.name}</div>
         <div class="modal-cat">${c.category} · ${c.subcategory}</div>
       </div>
       <button id="modalFavBtn" onclick="toggleFav(event,'${c.id}');updateModalFavBtn('${c.id}')"
-        style="width:36px;height:36px;border-radius:50%;background:var(--bg);box-shadow:3px 3px 7px rgba(0,0,0,0.1),-2px -2px 6px rgba(255,255,255,0.85);border:none;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:${isFav ? 'var(--accent)' : 'var(--text3)'};transition:all 0.2s;">
+        style="font-size:24px;background:none;border:none;cursor:pointer;color:${isFav ? 'var(--accent)' : '#555'};padding:4px;transition:color 0.2s;">
         ${isFav ? '⭐' : '☆'}
       </button>
     </div>
@@ -923,7 +859,7 @@ function openDetail(id) {
         <div class="modal-row-val"><span class="hours-badge ${hoursClass}">${c.hours}</span></div>
       </div>
     </div>
-    ${c.ars ? `<div class="ars-tip"><strong>💡 ARS 단축 안내</strong><br>${c.ars.split('/').join('<br>')}</div>` : ''}
+    ${c.ars ? `<div class="ars-tip">💡 ARS 단축 안내<br>${c.ars.split('/').join('<br>')}</div>` : ''}
     <a class="modal-call-btn" href="tel:${c.tel.replace(/[^0-9+]/g,'')}" onclick="recordCall('${c.id}')">
       📞 지금 전화하기
     </a>
@@ -936,7 +872,7 @@ function updateModalFavBtn(id) {
   if (btn) {
     const active = favorites.includes(id);
     btn.textContent = active ? '⭐' : '☆';
-    btn.style.color = active ? 'var(--accent)' : 'var(--text3)';
+    btn.style.color = active ? 'var(--accent)' : '#555';
   }
 }
 
