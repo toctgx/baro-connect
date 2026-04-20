@@ -2958,5 +2958,395 @@
     "ars": "",
     "hours": "평일 09:00~18:00",
     "official": true
+  },
+  {
+    "id": "a101",
+    "name": "삼성화재 긴급출동",
+    "category": "자동차",
+    "subcategory": "긴급출동",
+    "tel": "1588-5114",
+    "ars": "",
+    "hours": "24시간",
+    "official": true
+  },
+  {
+    "id": "a102",
+    "name": "현대해상 긴급출동",
+    "category": "자동차",
+    "subcategory": "긴급출동",
+    "tel": "1588-5656",
+    "ars": "",
+    "hours": "24시간",
+    "official": true
+  },
+  {
+    "id": "a103",
+    "name": "KB손보 긴급출동",
+    "category": "자동차",
+    "subcategory": "긴급출동",
+    "tel": "1588-0073",
+    "ars": "",
+    "hours": "24시간",
+    "official": true
+  },
+  {
+    "id": "a104",
+    "name": "DB손보 긴급출동",
+    "category": "자동차",
+    "subcategory": "긴급출동",
+    "tel": "1588-0100",
+    "ars": "",
+    "hours": "24시간",
+    "official": true
+  },
+  {
+    "id": "a105",
+    "name": "메리츠화재 긴급출동",
+    "category": "자동차",
+    "subcategory": "긴급출동",
+    "tel": "1566-7711",
+    "ars": "",
+    "hours": "24시간",
+    "official": true
+  },
+  {
+    "id": "a106",
+    "name": "한화손보 긴급출동",
+    "category": "자동차",
+    "subcategory": "긴급출동",
+    "tel": "1566-8000",
+    "ars": "",
+    "hours": "24시간",
+    "official": true
+  },
+  {
+    "id": "a107",
+    "name": "롯데손보 긴급출동",
+    "category": "자동차",
+    "subcategory": "긴급출동",
+    "tel": "1588-3344",
+    "ars": "",
+    "hours": "24시간",
+    "official": true
+  },
+  {
+    "id": "a111",
+    "name": "오토큐 (현대/기아 공식)",
+    "category": "자동차",
+    "subcategory": "카센터",
+    "tel": "1588-1880",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "a112",
+    "name": "불스원 카케어",
+    "category": "자동차",
+    "subcategory": "카센터",
+    "tel": "1544-0100",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": false
+  },
+  {
+    "id": "a113",
+    "name": "SK네트웍스 스피드메이트",
+    "category": "자동차",
+    "subcategory": "카센터",
+    "tel": "080-300-8585",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "a121",
+    "name": "교통안전공단 자동차검사",
+    "category": "자동차",
+    "subcategory": "자동차검사",
+    "tel": "1588-2119",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "a131",
+    "name": "도로교통공단 운전면허",
+    "category": "자동차",
+    "subcategory": "운전면허",
+    "tel": "1577-1120",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "p101",
+    "name": "24시 동물의료센터 (서울)",
+    "category": "반려동물",
+    "subcategory": "동물병원",
+    "tel": "02-794-0094",
+    "ars": "",
+    "hours": "24시간",
+    "official": false
+  },
+  {
+    "id": "p102",
+    "name": "건국대 동물병원 응급",
+    "category": "반려동물",
+    "subcategory": "동물병원",
+    "tel": "02-2049-1200",
+    "ars": "",
+    "hours": "24시간",
+    "official": true
+  },
+  {
+    "id": "p103",
+    "name": "서울대 동물병원 응급",
+    "category": "반려동물",
+    "subcategory": "동물병원",
+    "tel": "02-880-1247",
+    "ars": "",
+    "hours": "24시간",
+    "official": true
+  },
+  {
+    "id": "p104",
+    "name": "동물보호센터 (국번없이)",
+    "category": "반려동물",
+    "subcategory": "동물보호",
+    "tel": "1577-0954",
+    "ars": "",
+    "hours": "24시간",
+    "official": true
+  },
+  {
+    "id": "p105",
+    "name": "동물학대 신고",
+    "category": "반려동물",
+    "subcategory": "신고",
+    "tel": "1577-0954",
+    "ars": "",
+    "hours": "24시간",
+    "official": true
+  },
+  {
+    "id": "p106",
+    "name": "삼성화재 펫보험",
+    "category": "반려동물",
+    "subcategory": "펫보험",
+    "tel": "1588-5114",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "p107",
+    "name": "현대해상 펫보험",
+    "category": "반려동물",
+    "subcategory": "펫보험",
+    "tel": "1588-5656",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "p108",
+    "name": "KB손보 펫보험",
+    "category": "반려동물",
+    "subcategory": "펫보험",
+    "tel": "1588-0073",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "c101",
+    "name": "아이돌봄서비스 (정부)",
+    "category": "육아/교육",
+    "subcategory": "아이돌봄",
+    "tel": "1577-2514",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "c102",
+    "name": "육아종합지원센터",
+    "category": "육아/교육",
+    "subcategory": "육아상담",
+    "tel": "1577-9337",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "c103",
+    "name": "어린이집 긴급신고",
+    "category": "육아/교육",
+    "subcategory": "긴급신고",
+    "tel": "044-202-3567",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "c104",
+    "name": "EBS 고객센터",
+    "category": "육아/교육",
+    "subcategory": "교육",
+    "tel": "1588-1580",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "c105",
+    "name": "웅진씽크빅 고객센터",
+    "category": "육아/교육",
+    "subcategory": "학습지",
+    "tel": "1588-0588",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "c106",
+    "name": "빨간펜 고객센터",
+    "category": "육아/교육",
+    "subcategory": "학습지",
+    "tel": "1588-1234",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "l101",
+    "name": "대한법률구조공단",
+    "category": "법률/세무",
+    "subcategory": "법률상담",
+    "tel": "132",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "l102",
+    "name": "한국세무사회 상담",
+    "category": "법률/세무",
+    "subcategory": "세무상담",
+    "tel": "1588-0075",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "l103",
+    "name": "노무사 무료상담 (고용부)",
+    "category": "법률/세무",
+    "subcategory": "노무상담",
+    "tel": "1350",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "l104",
+    "name": "국선변호인 (대한변협)",
+    "category": "법률/세무",
+    "subcategory": "법률상담",
+    "tel": "02-3476-6500",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "l105",
+    "name": "국세청 세금상담",
+    "category": "법률/세무",
+    "subcategory": "세무상담",
+    "tel": "126",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "e101",
+    "name": "중독상담 (마약/약물)",
+    "category": "긴급",
+    "subcategory": "중독상담",
+    "tel": "1342",
+    "ars": "",
+    "hours": "24시간",
+    "official": true
+  },
+  {
+    "id": "e102",
+    "name": "가정폭력 신고상담",
+    "category": "긴급",
+    "subcategory": "폭력신고",
+    "tel": "1366",
+    "ars": "",
+    "hours": "24시간",
+    "official": true
+  },
+  {
+    "id": "e103",
+    "name": "사이버범죄신고 (경찰청)",
+    "category": "긴급",
+    "subcategory": "사이버범죄",
+    "tel": "182",
+    "ars": "",
+    "hours": "24시간",
+    "official": true
+  },
+  {
+    "id": "e104",
+    "name": "응급의료정보센터",
+    "category": "긴급",
+    "subcategory": "응급실",
+    "tel": "1339",
+    "ars": "",
+    "hours": "24시간",
+    "official": true
+  },
+  {
+    "id": "e105",
+    "name": "서울아산병원 응급",
+    "category": "긴급",
+    "subcategory": "응급실",
+    "tel": "02-3010-3333",
+    "ars": "",
+    "hours": "24시간",
+    "official": true
+  },
+  {
+    "id": "e106",
+    "name": "삼성서울병원 응급",
+    "category": "긴급",
+    "subcategory": "응급실",
+    "tel": "02-3410-2053",
+    "ars": "",
+    "hours": "24시간",
+    "official": true
+  },
+  {
+    "id": "e107",
+    "name": "세브란스병원 응급",
+    "category": "긴급",
+    "subcategory": "응급실",
+    "tel": "02-2228-8888",
+    "ars": "",
+    "hours": "24시간",
+    "official": true
+  },
+  {
+    "id": "e108",
+    "name": "서울대병원 응급",
+    "category": "긴급",
+    "subcategory": "응급실",
+    "tel": "02-2072-2632",
+    "ars": "",
+    "hours": "24시간",
+    "official": true
   }
 ]
