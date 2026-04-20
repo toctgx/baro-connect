@@ -8,18 +8,18 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --bg: #0f0f1a;
-      --surface: #1a1a2e;
-      --surface2: #16213e;
-      --accent: #7c3aed;
-      --accent2: #a855f7;
-      --blue: #3b82f6;
-      --green: #10b981;
+      --bg: #0d0d0d;
+      --surface: #1e1e1e;
+      --surface2: #141414;
+      --surface3: #2a2a2a;
+      --accent: #f0b400;
+      --accent2: #f0d23c;
+      --blue: #1e3cd2;
+      --green: #1ed25a;
       --red: #ef4444;
-      --text: #f1f5f9;
-      --text2: #94a3b8;
-      --border: #2d2d44;
-      --card-hover: #252538;
+      --text: #f0f0f0;
+      --text2: #969696;
+      --border: #2f2f2f;
     }
     html, body {
       height: 100%;
@@ -47,7 +47,7 @@
       position: absolute;
       bottom: 0; left: 0; right: 0;
       height: 1.5px;
-      background: linear-gradient(90deg, var(--accent), var(--blue));
+      background: linear-gradient(90deg, #f0b400, transparent);
     }
     .header-top {
       display: flex;
@@ -56,12 +56,12 @@
     }
     .header-left { display: flex; flex-direction: column; gap: 2px; }
     .header-title-row { display: flex; align-items: center; gap: 8px; }
-    .header-icon { font-size: 22px; }
+    .header-icon { font-size: 22px; filter: sepia(1) saturate(4) hue-rotate(5deg); }
     .header-title { color: var(--text); font-size: 20px; font-weight: 800; letter-spacing: -0.5px; }
-    .header-sub { color: var(--accent2); font-size: 12px; font-weight: 600; padding-left: 30px; }
+    .header-sub { color: var(--accent); font-size: 12px; font-weight: 600; padding-left: 30px; }
     .header-badge {
       background: var(--accent);
-      color: #fff;
+      color: #000;
       font-size: 11px;
       font-weight: 700;
       padding: 4px 10px;
@@ -74,19 +74,20 @@
       margin-top: 12px;
       display: flex;
       align-items: center;
-      background: #252538;
-      border: 1.5px solid var(--accent);
+      background: var(--surface);
+      border: 1.5px solid var(--border);
       border-radius: 14px;
       padding: 0 12px;
       gap: 8px;
       height: 44px;
       position: relative;
-      transition: box-shadow 0.2s ease;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
     }
     .search-wrap:focus-within {
-      box-shadow: 0 0 0 3px rgba(124,58,237,0.3);
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(240,180,0,0.2);
     }
-    .search-icon { font-size: 16px; color: var(--accent2); flex: 0 0 auto; }
+    .search-icon { font-size: 16px; color: var(--accent); flex: 0 0 auto; }
     .search-wrap input {
       flex: 1;
       border: none;
@@ -98,16 +99,17 @@
     }
     .search-wrap input::placeholder { color: var(--text2); }
     .filter-btn {
-      background: none;
-      border: none;
-      font-size: 18px;
+      background: var(--surface3);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 16px;
       cursor: pointer;
-      padding: 0 2px;
+      padding: 4px 8px;
       color: var(--text2);
       flex: 0 0 auto;
-      transition: color 0.2s ease;
+      transition: color 0.2s ease, background 0.2s ease;
     }
-    .filter-btn:hover { color: var(--accent2); }
+    .filter-btn:hover { color: var(--accent); background: #333; }
 
     /* 최근 검색어 드롭다운 */
     .recent-search-dropdown {
@@ -118,7 +120,7 @@
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 14px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.6);
       z-index: 100;
       overflow: hidden;
     }
@@ -141,7 +143,7 @@
       color: var(--text);
       transition: background 0.2s ease;
     }
-    .recent-search-item:hover { background: var(--card-hover); }
+    .recent-search-item:hover { background: var(--surface3); }
     .recent-search-icon { font-size: 13px; color: var(--text2); }
     .recent-search-del {
       margin-left: auto;
@@ -171,7 +173,7 @@
       font-weight: 600;
       border: 1.5px solid var(--border);
       color: var(--text2);
-      background: transparent;
+      background: var(--surface);
       cursor: pointer;
       font-family: inherit;
       white-space: nowrap;
@@ -180,7 +182,8 @@
     .cat-chip.active {
       background: var(--accent);
       border-color: var(--accent);
-      color: #fff;
+      color: #000;
+      font-weight: 700;
     }
     .cat-chip:hover:not(.active) {
       border-color: var(--accent);
@@ -211,21 +214,22 @@
       border-radius: 14px;
       padding: 13px 14px;
       border: 1px solid var(--border);
+      border-left: 3px solid transparent;
       display: flex;
       align-items: center;
       gap: 12px;
       cursor: pointer;
-      transition: background 0.2s ease, border-color 0.2s ease;
+      transition: background 0.2s ease, border-color 0.2s ease, border-left-color 0.2s ease;
       position: relative;
     }
     .contact-card:hover, .contact-card:active {
-      background: var(--card-hover);
-      border-color: var(--accent);
+      background: #252525;
+      border-left-color: var(--accent);
     }
     .contact-icon {
       width: 44px; height: 44px;
       border-radius: 50%;
-      background: rgba(124,58,237,0.13);
+      background: var(--surface3);
       display: flex; align-items: center; justify-content: center;
       font-size: 20px;
       flex: 0 0 auto;
@@ -243,35 +247,42 @@
     .open-dot.closed { background: var(--red); }
 
     .contact-info { flex: 1; min-width: 0; }
-    .contact-name { font-size: 14px; font-weight: 700; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .contact-name {
+      font-size: 14px; font-weight: 600; color: var(--text);
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
     .contact-sub { font-size: 11px; color: var(--text2); margin-top: 2px; }
-    .contact-tel { font-size: 13px; font-weight: 700; color: var(--accent2); margin-top: 4px; }
+    .contact-tel { font-size: 13px; font-weight: 700; color: var(--accent); margin-top: 4px; }
 
     .call-btn {
       flex: 0 0 auto;
       width: 40px; height: 40px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--accent), var(--blue));
+      background: linear-gradient(135deg, #f0b400, #f0d23c);
       border: none;
       cursor: pointer;
       display: flex; align-items: center; justify-content: center;
       font-size: 18px;
-      box-shadow: 0 2px 10px rgba(124,58,237,0.4);
+      box-shadow: 0 2px 10px rgba(240,180,0,0.3);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
       text-decoration: none;
+      filter: grayscale(0);
     }
     .call-btn:active {
       transform: scale(0.9);
-      box-shadow: 0 1px 5px rgba(124,58,237,0.3);
+      box-shadow: 0 1px 5px rgba(240,180,0,0.2);
     }
+    /* 전화 아이콘 어둡게 */
+    .call-btn-icon { font-size: 18px; filter: brightness(0); }
 
     /* 즐겨찾기 버튼 */
     .fav-btn {
       position: absolute; top: 10px; right: 10px;
       background: none; border: none; font-size: 16px; cursor: pointer; padding: 4px;
-      color: var(--text2);
-      transition: transform 0.2s ease;
+      color: #555;
+      transition: transform 0.2s ease, color 0.2s ease;
     }
+    .fav-btn.active { color: var(--accent); }
     .fav-btn:active { transform: scale(1.2); }
 
     /* 빈 상태 */
@@ -287,7 +298,7 @@
     .modal-backdrop {
       display: none;
       position: fixed; inset: 0;
-      background: rgba(0,0,0,0.6);
+      background: rgba(0,0,0,0.85);
       z-index: 200;
       align-items: flex-end;
     }
@@ -317,8 +328,9 @@
     .modal-row {
       display: flex; align-items: flex-start; gap: 10px;
       margin-bottom: 10px; padding: 12px;
-      background: #252538;
+      background: #252525;
       border-radius: 12px;
+      border: 1px solid var(--border);
     }
     .modal-row-icon { font-size: 18px; flex: 0 0 auto; margin-top: 1px; }
     .modal-row-label { font-size: 11px; color: var(--text2); font-weight: 600; }
@@ -326,8 +338,8 @@
     .modal-call-btn {
       width: 100%;
       padding: 15px;
-      background: linear-gradient(135deg, var(--accent), var(--blue));
-      color: #fff;
+      background: linear-gradient(135deg, #f0b400, #f0d23c);
+      color: #000;
       border: none;
       border-radius: 14px;
       font-size: 16px;
@@ -340,7 +352,7 @@
       justify-content: center;
       gap: 8px;
       text-decoration: none;
-      box-shadow: 0 4px 15px rgba(124,58,237,0.4);
+      box-shadow: 0 4px 15px rgba(240,180,0,0.3);
       transition: opacity 0.2s ease, transform 0.2s ease;
     }
     .modal-call-btn:active { opacity: 0.85; transform: scale(0.98); }
@@ -351,11 +363,11 @@
       font-size: 11px;
       font-weight: 700;
     }
-    .hours-24 { background: rgba(16,185,129,0.15); color: var(--green); }
-    .hours-weekday { background: rgba(59,130,246,0.15); color: var(--blue); }
+    .hours-24 { background: rgba(30,210,90,0.15); color: var(--green); }
+    .hours-weekday { background: rgba(30,60,210,0.15); color: #6a8fef; }
     .ars-tip {
-      background: rgba(124,58,237,0.1);
-      border: 1px solid rgba(124,58,237,0.25);
+      background: rgba(240,180,0,0.08);
+      border: 1px solid rgba(240,180,0,0.2);
       border-radius: 12px;
       padding: 12px 14px;
       font-size: 12px;
@@ -381,13 +393,13 @@
       position: relative;
       transition: color 0.2s ease;
     }
-    .tab-btn.active { color: var(--accent2); }
+    .tab-btn.active { color: var(--accent); }
     .tab-btn.active::before {
       content: '';
       position: absolute;
       top: 0; left: 20%; right: 20%;
       height: 2px;
-      background: var(--accent2);
+      background: var(--accent);
       border-radius: 0 0 2px 2px;
     }
     .tab-icon { font-size: 20px; }
@@ -396,7 +408,7 @@
     .report-backdrop {
       display: none;
       position: fixed; inset: 0;
-      background: rgba(0,0,0,0.6);
+      background: rgba(0,0,0,0.85);
       z-index: 300;
       align-items: flex-end;
     }
@@ -429,7 +441,7 @@
       font-size: 14px;
       font-family: inherit;
       color: var(--text);
-      background: #252538;
+      background: #252525;
       outline: none;
       transition: border-color 0.2s ease, box-shadow 0.2s ease;
     }
@@ -437,15 +449,15 @@
     .form-group select:focus,
     .form-group textarea:focus {
       border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(124,58,237,0.2);
+      box-shadow: 0 0 0 3px rgba(240,180,0,0.15);
     }
-    .form-group select option { background: var(--surface); }
+    .form-group select option { background: var(--surface); color: var(--text); }
     .form-group textarea { resize: none; height: 80px; }
     .report-submit-btn {
       width: 100%;
       padding: 15px;
-      background: linear-gradient(135deg, var(--accent), var(--blue));
-      color: #fff;
+      background: linear-gradient(135deg, #f0b400, #f0d23c);
+      color: #000;
       border: none;
       border-radius: 14px;
       font-size: 16px;
@@ -453,7 +465,7 @@
       cursor: pointer;
       font-family: inherit;
       margin-top: 8px;
-      box-shadow: 0 4px 15px rgba(124,58,237,0.4);
+      box-shadow: 0 4px 15px rgba(240,180,0,0.3);
       transition: opacity 0.2s ease;
     }
     .report-submit-btn:active { opacity: 0.85; }
@@ -477,16 +489,16 @@
       left: 50%;
       transform: translateX(-50%) translateY(20px);
       background: var(--accent);
-      color: #fff;
+      color: #000;
       padding: 10px 22px;
       border-radius: 24px;
       font-size: 13px;
-      font-weight: 600;
+      font-weight: 700;
       opacity: 0;
       transition: all 0.3s ease;
       z-index: 500;
       white-space: nowrap;
-      box-shadow: 0 4px 16px rgba(124,58,237,0.5);
+      box-shadow: 0 4px 16px rgba(240,180,0,0.4);
     }
     .toast.show {
       opacity: 1;
@@ -500,34 +512,38 @@
       border-radius: 14px;
       padding: 13px 14px;
       border: 1px solid var(--border);
+      border-left: 3px solid transparent;
       display: flex;
       align-items: center;
       gap: 12px;
-      transition: background 0.2s ease;
+      transition: background 0.2s ease, border-left-color 0.2s ease;
     }
-    .history-card:hover { background: var(--card-hover); }
+    .history-card:hover {
+      background: #252525;
+      border-left-color: var(--accent);
+    }
     .history-icon {
       width: 44px; height: 44px;
       border-radius: 50%;
-      background: rgba(124,58,237,0.13);
+      background: var(--surface3);
       display: flex; align-items: center; justify-content: center;
       font-size: 20px;
       flex: 0 0 auto;
     }
     .history-info { flex: 1; min-width: 0; }
-    .history-name { font-size: 14px; font-weight: 700; color: var(--text); }
-    .history-tel { font-size: 13px; color: var(--accent2); font-weight: 600; margin-top: 2px; }
+    .history-name { font-size: 14px; font-weight: 600; color: var(--text); }
+    .history-tel { font-size: 13px; color: var(--accent); font-weight: 700; margin-top: 2px; }
     .history-time { font-size: 11px; color: var(--text2); margin-top: 2px; }
     .history-call-btn {
       flex: 0 0 auto;
       width: 40px; height: 40px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--accent), var(--blue));
+      background: linear-gradient(135deg, #f0b400, #f0d23c);
       border: none;
       display: flex; align-items: center; justify-content: center;
       font-size: 18px;
       text-decoration: none;
-      box-shadow: 0 2px 10px rgba(124,58,237,0.4);
+      box-shadow: 0 2px 10px rgba(240,180,0,0.3);
       transition: transform 0.2s ease;
     }
     .history-call-btn:active { transform: scale(0.9); }
@@ -748,8 +764,10 @@ function render() {
         <div class="contact-sub">${c.category} · ${c.subcategory}</div>
         <div class="contact-tel">${c.tel}</div>
       </div>
-      <a class="call-btn" href="tel:${c.tel.replace(/[^0-9+]/g,'')}" onclick="event.stopPropagation();recordCall('${c.id}')">📞</a>
-      <button class="fav-btn" onclick="toggleFav(event,'${c.id}')">${isFav(c.id) ? '⭐' : '☆'}</button>
+      <a class="call-btn" href="tel:${c.tel.replace(/[^0-9+]/g,'')}" onclick="event.stopPropagation();recordCall('${c.id}')">
+        <span class="call-btn-icon">📞</span>
+      </a>
+      <button class="fav-btn ${isFav(c.id) ? 'active' : ''}" onclick="toggleFav(event,'${c.id}')">${isFav(c.id) ? '⭐' : '☆'}</button>
     </div>`;
   }).join('') + `</div>`;
 }
@@ -780,7 +798,9 @@ function renderHistory() {
         <div class="history-tel">${tel}</div>
         <div class="history-time">${formatTime(h.ts)}</div>
       </div>
-      <a class="history-call-btn" href="tel:${tel.replace(/[^0-9+]/g,'')}">📞</a>
+      <a class="history-call-btn" href="tel:${tel.replace(/[^0-9+]/g,'')}">
+        <span style="filter:brightness(0);font-size:18px;">📞</span>
+      </a>
     </div>`;
   }).join('') + `</div>`;
 }
@@ -821,7 +841,7 @@ function openDetail(id) {
         <div class="modal-cat">${c.category} · ${c.subcategory}</div>
       </div>
       <button id="modalFavBtn" onclick="toggleFav(event,'${c.id}');updateModalFavBtn('${c.id}')"
-        style="font-size:24px;background:none;border:none;cursor:pointer;color:var(--text2);padding:4px;">
+        style="font-size:24px;background:none;border:none;cursor:pointer;color:${isFav ? 'var(--accent)' : '#555'};padding:4px;transition:color 0.2s;">
         ${isFav ? '⭐' : '☆'}
       </button>
     </div>
@@ -829,7 +849,7 @@ function openDetail(id) {
       <div class="modal-row-icon">📞</div>
       <div>
         <div class="modal-row-label">전화번호</div>
-        <div class="modal-row-val">${c.tel}</div>
+        <div class="modal-row-val" style="color:var(--accent);">${c.tel}</div>
       </div>
     </div>
     <div class="modal-row">
@@ -849,7 +869,11 @@ function openDetail(id) {
 
 function updateModalFavBtn(id) {
   const btn = document.getElementById('modalFavBtn');
-  if (btn) btn.textContent = favorites.includes(id) ? '⭐' : '☆';
+  if (btn) {
+    const active = favorites.includes(id);
+    btn.textContent = active ? '⭐' : '☆';
+    btn.style.color = active ? 'var(--accent)' : '#555';
+  }
 }
 
 function closeModal(e) {
