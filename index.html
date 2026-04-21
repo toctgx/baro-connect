@@ -97,20 +97,6 @@
       background: transparent;
     }
     .search-wrap input::placeholder { color: var(--text3); }
-    .filter-btn {
-      background: var(--bg);
-      box-shadow: 4px 4px 8px rgba(0,0,0,0.1), -3px -3px 7px rgba(255,255,255,0.85);
-      border: none;
-      border-radius: 10px;
-      font-size: 15px;
-      cursor: pointer;
-      padding: 5px 8px;
-      flex: 0 0 auto;
-      transition: all 0.2s ease;
-    }
-    .filter-btn:active {
-      box-shadow: inset 2px 2px 5px rgba(0,0,0,0.1), inset -2px -2px 5px rgba(255,255,255,0.85);
-    }
 
     /* 최근 검색어 드롭다운 */
     .recent-search-dropdown {
@@ -622,7 +608,6 @@
     <div class="search-wrap" id="searchWrap">
       <span class="search-icon">🔍</span>
       <input type="text" id="searchInput" placeholder="기관명, 번호, 서비스 검색..." autocomplete="off" />
-      <button class="filter-btn" title="필터">⚙️</button>
       <div class="recent-search-dropdown" id="recentDropdown"></div>
     </div>
   </div>
