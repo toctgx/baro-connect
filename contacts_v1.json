@@ -3348,5 +3348,905 @@
     "ars": "",
     "hours": "24시간",
     "official": true
+  },
+  {
+    "id": "f026",
+    "name": "투썸플레이스 고객센터",
+    "category": "식품",
+    "subcategory": "커피전문점",
+    "tel": "1588-6050",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "f027",
+    "name": "메가커피 고객센터",
+    "category": "식품",
+    "subcategory": "커피전문점",
+    "tel": "1599-7508",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "f028",
+    "name": "맥도날드 고객센터",
+    "category": "식품",
+    "subcategory": "패스트푸드",
+    "tel": "1600-5252",
+    "ars": "",
+    "hours": "24시간",
+    "official": true
+  },
+  {
+    "id": "f029",
+    "name": "롯데리아 고객센터",
+    "category": "식품",
+    "subcategory": "패스트푸드",
+    "tel": "1588-5700",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "f030",
+    "name": "버거킹 고객센터",
+    "category": "식품",
+    "subcategory": "패스트푸드",
+    "tel": "1599-0133",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "f031",
+    "name": "KFC 고객센터",
+    "category": "식품",
+    "subcategory": "패스트푸드",
+    "tel": "1588-7771",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "f032",
+    "name": "피자헛 고객센터",
+    "category": "식품",
+    "subcategory": "피자",
+    "tel": "1588-5588",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "f033",
+    "name": "도미노피자 고객센터",
+    "category": "식품",
+    "subcategory": "피자",
+    "tel": "1577-3082",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "f034",
+    "name": "파파존스 고객센터",
+    "category": "식품",
+    "subcategory": "피자",
+    "tel": "1566-2211",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "f035",
+    "name": "bhc치킨 고객센터",
+    "category": "식품",
+    "subcategory": "치킨",
+    "tel": "1600-9292",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "f036",
+    "name": "교촌치킨 고객센터",
+    "category": "식품",
+    "subcategory": "치킨",
+    "tel": "1588-8284",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "f037",
+    "name": "BBQ치킨 고객센터",
+    "category": "식품",
+    "subcategory": "치킨",
+    "tel": "1588-9282",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "f038",
+    "name": "제너시스BBQ 고객센터",
+    "category": "식품",
+    "subcategory": "치킨",
+    "tel": "1588-9282",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "f039",
+    "name": "CJ푸드빌(뚜레쥬르) 고객센터",
+    "category": "식품",
+    "subcategory": "베이커리",
+    "tel": "1577-1234",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "f040",
+    "name": "파리바게뜨 고객센터",
+    "category": "식품",
+    "subcategory": "베이커리",
+    "tel": "1588-4800",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "f041",
+    "name": "신세계푸드 고객센터",
+    "category": "식품",
+    "subcategory": "가공식품",
+    "tel": "1588-1234",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "f042",
+    "name": "하림 고객센터",
+    "category": "식품",
+    "subcategory": "육류/가공식품",
+    "tel": "1588-4455",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "f043",
+    "name": "사조 고객센터",
+    "category": "식품",
+    "subcategory": "수산/가공식품",
+    "tel": "1544-8200",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "f044",
+    "name": "CJ대한통운(CJ더마켓) 고객센터",
+    "category": "식품",
+    "subcategory": "식품배달",
+    "tel": "1588-1255",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "f045",
+    "name": "마켓컬리 고객센터",
+    "category": "식품",
+    "subcategory": "신선식품배달",
+    "tel": "1644-1107",
+    "ars": "",
+    "hours": "24시간",
+    "official": true
+  },
+  {
+    "id": "f046",
+    "name": "쿠팡이츠 고객센터",
+    "category": "식품",
+    "subcategory": "음식배달",
+    "tel": "1577-9854",
+    "ars": "",
+    "hours": "24시간",
+    "official": true
+  },
+  {
+    "id": "f047",
+    "name": "배달의민족 고객센터",
+    "category": "식품",
+    "subcategory": "음식배달",
+    "tel": "1544-0880",
+    "ars": "",
+    "hours": "24시간",
+    "official": true
+  },
+  {
+    "id": "f048",
+    "name": "요기요 고객센터",
+    "category": "식품",
+    "subcategory": "음식배달",
+    "tel": "1644-8320",
+    "ars": "",
+    "hours": "24시간",
+    "official": true
+  },
+  {
+    "id": "f049",
+    "name": "해피오더 고객센터",
+    "category": "식품",
+    "subcategory": "음식배달",
+    "tel": "1588-2068",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "f050",
+    "name": "이마트24 고객센터",
+    "category": "식품",
+    "subcategory": "편의점",
+    "tel": "1800-3557",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "e201",
+    "name": "삼성전자 서비스센터",
+    "category": "전자제품",
+    "subcategory": "휴대폰/가전",
+    "tel": "1588-3366",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "e202",
+    "name": "LG전자 서비스센터",
+    "category": "전자제품",
+    "subcategory": "휴대폰/가전",
+    "tel": "1544-7777",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "e203",
+    "name": "삼성 갤럭시 고객센터",
+    "category": "전자제품",
+    "subcategory": "휴대폰",
+    "tel": "1588-3366",
+    "ars": "",
+    "hours": "24시간",
+    "official": true
+  },
+  {
+    "id": "e204",
+    "name": "애플 코리아 고객센터",
+    "category": "전자제품",
+    "subcategory": "휴대폰/컴퓨터",
+    "tel": "080-333-4000",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "e205",
+    "name": "애플 AppleCare 기술지원",
+    "category": "전자제품",
+    "subcategory": "휴대폰/컴퓨터",
+    "tel": "080-333-4000",
+    "ars": "",
+    "hours": "24시간",
+    "official": true
+  },
+  {
+    "id": "e206",
+    "name": "LG유플러스 단말 서비스",
+    "category": "전자제품",
+    "subcategory": "휴대폰",
+    "tel": "1544-0010",
+    "ars": "",
+    "hours": "24시간",
+    "official": true
+  },
+  {
+    "id": "e207",
+    "name": "SK매직 고객센터",
+    "category": "전자제품",
+    "subcategory": "생활가전",
+    "tel": "1599-9000",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "e208",
+    "name": "위니아(대우전자) 서비스",
+    "category": "전자제품",
+    "subcategory": "생활가전",
+    "tel": "1588-4500",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "e209",
+    "name": "쿠쿠전자 고객센터",
+    "category": "전자제품",
+    "subcategory": "생활가전",
+    "tel": "1577-2828",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "e210",
+    "name": "쿠첸 고객센터",
+    "category": "전자제품",
+    "subcategory": "생활가전",
+    "tel": "1588-9233",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "e211",
+    "name": "청호나이스 고객센터",
+    "category": "전자제품",
+    "subcategory": "정수기/공기청정기",
+    "tel": "1588-3535",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "e212",
+    "name": "코웨이 고객센터",
+    "category": "전자제품",
+    "subcategory": "정수기/공기청정기",
+    "tel": "1588-5200",
+    "ars": "",
+    "hours": "24시간",
+    "official": true
+  },
+  {
+    "id": "e213",
+    "name": "바디프랜드 고객센터",
+    "category": "전자제품",
+    "subcategory": "안마의자",
+    "tel": "1588-1000",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "e214",
+    "name": "다이슨 코리아 고객센터",
+    "category": "전자제품",
+    "subcategory": "생활가전",
+    "tel": "080-022-4444",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "e215",
+    "name": "필립스 코리아 고객센터",
+    "category": "전자제품",
+    "subcategory": "생활가전",
+    "tel": "080-022-3312",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "e216",
+    "name": "파나소닉 코리아 고객센터",
+    "category": "전자제품",
+    "subcategory": "가전",
+    "tel": "080-022-4444",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "e217",
+    "name": "소니코리아 고객센터",
+    "category": "전자제품",
+    "subcategory": "가전/카메라",
+    "tel": "1588-0911",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "e218",
+    "name": "캐논코리아 고객센터",
+    "category": "전자제품",
+    "subcategory": "카메라/프린터",
+    "tel": "1588-9350",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "e219",
+    "name": "엡손코리아 고객센터",
+    "category": "전자제품",
+    "subcategory": "프린터",
+    "tel": "1566-3515",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "e220",
+    "name": "HP코리아 고객센터",
+    "category": "전자제품",
+    "subcategory": "컴퓨터/프린터",
+    "tel": "080-703-0700",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "e221",
+    "name": "델 코리아 고객센터",
+    "category": "전자제품",
+    "subcategory": "컴퓨터",
+    "tel": "080-200-3800",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "e222",
+    "name": "레노버 코리아 고객센터",
+    "category": "전자제품",
+    "subcategory": "컴퓨터",
+    "tel": "1544-1441",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "e223",
+    "name": "마이크로소프트 고객센터",
+    "category": "전자제품",
+    "subcategory": "소프트웨어/Xbox",
+    "tel": "1577-9700",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "e224",
+    "name": "닌텐도 코리아 고객센터",
+    "category": "전자제품",
+    "subcategory": "게임기",
+    "tel": "1588-0103",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "e225",
+    "name": "소니 플레이스테이션 고객센터",
+    "category": "전자제품",
+    "subcategory": "게임기",
+    "tel": "1588-0911",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "e226",
+    "name": "샤오미 공식 고객센터",
+    "category": "전자제품",
+    "subcategory": "가전/휴대폰",
+    "tel": "1800-0908",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "e227",
+    "name": "화웨이 고객센터",
+    "category": "전자제품",
+    "subcategory": "가전/휴대폰",
+    "tel": "1800-8888",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "e228",
+    "name": "하이마트 고객센터",
+    "category": "전자제품",
+    "subcategory": "가전양판점",
+    "tel": "1588-1235",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "e229",
+    "name": "전자랜드 고객센터",
+    "category": "전자제품",
+    "subcategory": "가전양판점",
+    "tel": "1661-1234",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "e230",
+    "name": "삼성디지털프라자 고객센터",
+    "category": "전자제품",
+    "subcategory": "가전양판점",
+    "tel": "1588-3366",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "e231",
+    "name": "LG베스트샵 고객센터",
+    "category": "전자제품",
+    "subcategory": "가전양판점",
+    "tel": "1544-7777",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "e232",
+    "name": "아이픽스잇(iPhone수리)",
+    "category": "전자제품",
+    "subcategory": "휴대폰수리",
+    "tel": "1544-0105",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": false
+  },
+  {
+    "id": "e233",
+    "name": "모두의프린터 고객센터",
+    "category": "전자제품",
+    "subcategory": "프린터",
+    "tel": "1600-9002",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": false
+  },
+  {
+    "id": "e234",
+    "name": "나이키 NRC/스포츠워치 지원",
+    "category": "전자제품",
+    "subcategory": "웨어러블",
+    "tel": "080-022-0182",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "e235",
+    "name": "가민 코리아 고객센터",
+    "category": "전자제품",
+    "subcategory": "웨어러블/GPS",
+    "tel": "1566-7500",
+    "ars": "",
+    "hours": "평일 09-18시",
+    "official": true
+  },
+  {
+    "id": "lx001",
+    "name": "루이비통 코리아 고객센터",
+    "category": "명품",
+    "subcategory": "패션/잡화",
+    "tel": "080-022-2255",
+    "ars": "",
+    "hours": "평일 10-18시",
+    "official": true
+  },
+  {
+    "id": "lx002",
+    "name": "샤넬 코리아 고객센터",
+    "category": "명품",
+    "subcategory": "패션/뷰티",
+    "tel": "080-023-1234",
+    "ars": "",
+    "hours": "평일 10-18시",
+    "official": true
+  },
+  {
+    "id": "lx003",
+    "name": "에르메스 코리아 고객센터",
+    "category": "명품",
+    "subcategory": "패션/잡화",
+    "tel": "02-542-4454",
+    "ars": "",
+    "hours": "평일 10-18시",
+    "official": true
+  },
+  {
+    "id": "lx004",
+    "name": "구찌 코리아 고객센터",
+    "category": "명품",
+    "subcategory": "패션/잡화",
+    "tel": "080-023-1234",
+    "ars": "",
+    "hours": "평일 10-18시",
+    "official": true
+  },
+  {
+    "id": "lx005",
+    "name": "프라다 코리아 고객센터",
+    "category": "명품",
+    "subcategory": "패션/잡화",
+    "tel": "02-512-9977",
+    "ars": "",
+    "hours": "평일 10-18시",
+    "official": true
+  },
+  {
+    "id": "lx006",
+    "name": "버버리 코리아 고객센터",
+    "category": "명품",
+    "subcategory": "패션",
+    "tel": "080-023-5555",
+    "ars": "",
+    "hours": "평일 10-18시",
+    "official": true
+  },
+  {
+    "id": "lx007",
+    "name": "발렌시아가 코리아 고객센터",
+    "category": "명품",
+    "subcategory": "패션",
+    "tel": "02-518-0707",
+    "ars": "",
+    "hours": "평일 10-18시",
+    "official": true
+  },
+  {
+    "id": "lx008",
+    "name": "생로랑 코리아 고객센터",
+    "category": "명품",
+    "subcategory": "패션",
+    "tel": "02-3442-1688",
+    "ars": "",
+    "hours": "평일 10-18시",
+    "official": true
+  },
+  {
+    "id": "lx009",
+    "name": "보테가베네타 코리아 고객센터",
+    "category": "명품",
+    "subcategory": "패션/잡화",
+    "tel": "02-541-8888",
+    "ars": "",
+    "hours": "평일 10-18시",
+    "official": true
+  },
+  {
+    "id": "lx010",
+    "name": "셀린느 코리아 고객센터",
+    "category": "명품",
+    "subcategory": "패션",
+    "tel": "02-3446-0010",
+    "ars": "",
+    "hours": "평일 10-18시",
+    "official": true
+  },
+  {
+    "id": "lx011",
+    "name": "디올 코리아 고객센터",
+    "category": "명품",
+    "subcategory": "패션/뷰티",
+    "tel": "080-022-3536",
+    "ars": "",
+    "hours": "평일 10-18시",
+    "official": true
+  },
+  {
+    "id": "lx012",
+    "name": "펜디 코리아 고객센터",
+    "category": "명품",
+    "subcategory": "패션/잡화",
+    "tel": "02-3446-5522",
+    "ars": "",
+    "hours": "평일 10-18시",
+    "official": true
+  },
+  {
+    "id": "lx013",
+    "name": "지방시 코리아 고객센터",
+    "category": "명품",
+    "subcategory": "패션",
+    "tel": "02-3442-0606",
+    "ars": "",
+    "hours": "평일 10-18시",
+    "official": true
+  },
+  {
+    "id": "lx014",
+    "name": "몽클레어 코리아 고객센터",
+    "category": "명품",
+    "subcategory": "패션",
+    "tel": "02-512-9955",
+    "ars": "",
+    "hours": "평일 10-18시",
+    "official": true
+  },
+  {
+    "id": "lx015",
+    "name": "롤렉스 코리아 공식 대리점",
+    "category": "명품",
+    "subcategory": "시계",
+    "tel": "02-3445-5400",
+    "ars": "",
+    "hours": "평일 10-18시",
+    "official": true
+  },
+  {
+    "id": "lx016",
+    "name": "까르띠에 코리아 고객센터",
+    "category": "명품",
+    "subcategory": "시계/주얼리",
+    "tel": "080-023-0000",
+    "ars": "",
+    "hours": "평일 10-18시",
+    "official": true
+  },
+  {
+    "id": "lx017",
+    "name": "오메가 코리아 고객센터",
+    "category": "명품",
+    "subcategory": "시계",
+    "tel": "080-022-0022",
+    "ars": "",
+    "hours": "평일 10-18시",
+    "official": true
+  },
+  {
+    "id": "lx018",
+    "name": "IWC 코리아 고객센터",
+    "category": "명품",
+    "subcategory": "시계",
+    "tel": "02-3440-5000",
+    "ars": "",
+    "hours": "평일 10-18시",
+    "official": true
+  },
+  {
+    "id": "lx019",
+    "name": "태그호이어 코리아 고객센터",
+    "category": "명품",
+    "subcategory": "시계",
+    "tel": "080-023-8282",
+    "ars": "",
+    "hours": "평일 10-18시",
+    "official": true
+  },
+  {
+    "id": "lx020",
+    "name": "불가리 코리아 고객센터",
+    "category": "명품",
+    "subcategory": "시계/주얼리",
+    "tel": "02-541-3441",
+    "ars": "",
+    "hours": "평일 10-18시",
+    "official": true
+  },
+  {
+    "id": "lx021",
+    "name": "티파니앤코 코리아 고객센터",
+    "category": "명품",
+    "subcategory": "주얼리",
+    "tel": "080-022-8484",
+    "ars": "",
+    "hours": "평일 10-18시",
+    "official": true
+  },
+  {
+    "id": "lx022",
+    "name": "판도라 코리아 고객센터",
+    "category": "명품",
+    "subcategory": "주얼리",
+    "tel": "1600-3663",
+    "ars": "",
+    "hours": "평일 10-18시",
+    "official": true
+  },
+  {
+    "id": "lx023",
+    "name": "스와로브스키 코리아 고객센터",
+    "category": "명품",
+    "subcategory": "주얼리",
+    "tel": "080-023-7979",
+    "ars": "",
+    "hours": "평일 10-18시",
+    "official": true
+  },
+  {
+    "id": "lx024",
+    "name": "코치 코리아 고객센터",
+    "category": "명품",
+    "subcategory": "패션/잡화",
+    "tel": "080-022-6224",
+    "ars": "",
+    "hours": "평일 10-18시",
+    "official": true
+  },
+  {
+    "id": "lx025",
+    "name": "마이클코어스 코리아 고객센터",
+    "category": "명품",
+    "subcategory": "패션/잡화",
+    "tel": "1800-8282",
+    "ars": "",
+    "hours": "평일 10-18시",
+    "official": true
+  },
+  {
+    "id": "lx026",
+    "name": "몽블랑 코리아 고객센터",
+    "category": "명품",
+    "subcategory": "필기구/시계",
+    "tel": "02-3448-7700",
+    "ars": "",
+    "hours": "평일 10-18시",
+    "official": true
+  },
+  {
+    "id": "lx027",
+    "name": "MCM 코리아 고객센터",
+    "category": "명품",
+    "subcategory": "패션/잡화",
+    "tel": "1588-8841",
+    "ars": "",
+    "hours": "평일 10-18시",
+    "official": true
+  },
+  {
+    "id": "lx028",
+    "name": "발렌티노 코리아 고객센터",
+    "category": "명품",
+    "subcategory": "패션",
+    "tel": "02-3446-4422",
+    "ars": "",
+    "hours": "평일 10-18시",
+    "official": true
+  },
+  {
+    "id": "lx029",
+    "name": "막스마라 코리아 고객센터",
+    "category": "명품",
+    "subcategory": "패션",
+    "tel": "02-3442-4455",
+    "ars": "",
+    "hours": "평일 10-18시",
+    "official": true
+  },
+  {
+    "id": "lx030",
+    "name": "폴스미스 코리아 고객센터",
+    "category": "명품",
+    "subcategory": "패션",
+    "tel": "02-3443-8866",
+    "ars": "",
+    "hours": "평일 10-18시",
+    "official": true
   }
 ]
