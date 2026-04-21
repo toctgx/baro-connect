@@ -227,6 +227,20 @@
       font-size: 22px;
       flex: 0 0 auto;
       position: relative;
+      overflow: hidden;
+    }
+    .contact-icon img.logo-img {
+      width: 34px; height: 34px;
+      object-fit: contain;
+      border-radius: 6px;
+    }
+    .contact-icon .logo-initial {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text2);
+      letter-spacing: -0.5px;
+      text-align: center;
+      line-height: 1;
     }
     /* 운영 상태 도트 */
     .open-dot {
@@ -730,6 +744,27 @@ let currentCat = 'ALL';
 let currentTab = 'home';
 let searchQ = '';
 
+function renderContactIcon(c) {
+  if (c.domain) {
+    const logoUrl = `https://logo.clearbit.com/${c.domain}?size=68`;
+    const initial = getInitial(c.name);
+    return `<img class="logo-img" src="${logoUrl}" alt="${c.name}" onerror="this.style.display='none';this.nextSibling.style.display='flex'" /><span class="logo-initial" style="display:none">${initial}</span>`;
+  }
+  const initial = getInitial(c.name);
+  if (initial) return `<span class="logo-initial">${initial}</span>`;
+  return CAT_ICONS[c.category] || '📞';
+}
+
+function getInitial(name) {
+  // 영문 약자 추출 (영문 2-4자)
+  const engMatch = name.match(/[A-Z]{2,4}/);
+  if (engMatch) return engMatch[0];
+  // 한글 기관명 이니셜 (앞 2글자)
+  const cleaned = name.replace(/\s*(고객센터|서비스센터|콜센터|상담센터|코리아|korea).*$/i, '').trim();
+  if (cleaned.length <= 4) return cleaned;
+  return cleaned.slice(0, 2);
+}
+
 const CAT_ICONS = {
   '긴급': '🚨',
   '관공서': '🏛️',
@@ -821,7 +856,7 @@ function render() {
     return `
     <div class="contact-card" onclick="openDetail('${c.id}')">
       <div class="contact-icon">
-        ${CAT_ICONS[c.category] || '📞'}
+        ${renderContactIcon(c)}
         ${dotHtml}
       </div>
       <div class="contact-info">

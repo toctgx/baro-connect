@@ -307,7 +307,8 @@
     "tel": "1599-0011",
     "ars": "0→상담원",
     "hours": "24시간",
-    "official": true
+    "official": true,
+    "domain": "skt.co.kr"
   },
   {
     "id": "t002",
@@ -317,7 +318,8 @@
     "tel": "100",
     "ars": "0→상담원",
     "hours": "24시간",
-    "official": true
+    "official": true,
+    "domain": "kt.com"
   },
   {
     "id": "t003",
@@ -327,7 +329,8 @@
     "tel": "101",
     "ars": "0→상담원",
     "hours": "24시간",
-    "official": true
+    "official": true,
+    "domain": "uplus.co.kr"
   },
   {
     "id": "t004",
@@ -357,7 +360,8 @@
     "tel": "1588-9999",
     "ars": "0→상담원",
     "hours": "24시간",
-    "official": true
+    "official": true,
+    "domain": "kbstar.com"
   },
   {
     "id": "f002",
@@ -367,7 +371,8 @@
     "tel": "1599-8000",
     "ars": "0→상담원",
     "hours": "24시간",
-    "official": true
+    "official": true,
+    "domain": "shinhan.com"
   },
   {
     "id": "f003",
@@ -377,7 +382,8 @@
     "tel": "1588-5000",
     "ars": "0→상담원",
     "hours": "24시간",
-    "official": true
+    "official": true,
+    "domain": "wooribank.com"
   },
   {
     "id": "f004",
@@ -387,7 +393,8 @@
     "tel": "1599-1111",
     "ars": "0→상담원",
     "hours": "24시간",
-    "official": true
+    "official": true,
+    "domain": "kebhana.com"
   },
   {
     "id": "f005",
@@ -397,7 +404,8 @@
     "tel": "1588-2100",
     "ars": "0→상담원",
     "hours": "24시간",
-    "official": true
+    "official": true,
+    "domain": "nonghyup.com"
   },
   {
     "id": "f006",
@@ -417,7 +425,8 @@
     "tel": "1599-3333",
     "ars": "",
     "hours": "24시간",
-    "official": true
+    "official": true,
+    "domain": "kakaobank.com"
   },
   {
     "id": "f008",
@@ -427,7 +436,8 @@
     "tel": "1899-4905",
     "ars": "",
     "hours": "24시간",
-    "official": true
+    "official": true,
+    "domain": "tossbank.com"
   },
   {
     "id": "f009",
@@ -447,7 +457,8 @@
     "tel": "1588-8900",
     "ars": "분실→1번",
     "hours": "24시간(분실)",
-    "official": true
+    "official": true,
+    "domain": "samsungcard.com"
   },
   {
     "id": "f011",
@@ -457,7 +468,8 @@
     "tel": "1577-6000",
     "ars": "분실→1번",
     "hours": "24시간(분실)",
-    "official": true
+    "official": true,
+    "domain": "hyundaicard.com"
   },
   {
     "id": "f012",
@@ -467,7 +479,8 @@
     "tel": "1588-1688",
     "ars": "분실→1번",
     "hours": "24시간(분실)",
-    "official": true
+    "official": true,
+    "domain": "kbcard.com"
   },
   {
     "id": "f013",
@@ -477,7 +490,8 @@
     "tel": "1544-7000",
     "ars": "분실→1번",
     "hours": "24시간(분실)",
-    "official": true
+    "official": true,
+    "domain": "shinhancard.com"
   },
   {
     "id": "f014",
@@ -607,7 +621,8 @@
     "tel": "1588-3366",
     "ars": "1→모바일/2→TV/3→가전",
     "hours": "평일 09:00~18:00",
-    "official": true
+    "official": true,
+    "domain": "samsung.com"
   },
   {
     "id": "i002",
@@ -617,7 +632,8 @@
     "tel": "1544-7777",
     "ars": "1→모바일/2→TV/3→가전",
     "hours": "평일 09:00~18:00",
-    "official": true
+    "official": true,
+    "domain": "lg.com"
   },
   {
     "id": "i003",
@@ -637,7 +653,8 @@
     "tel": "1577-3344",
     "ars": "",
     "hours": "평일 09:00~18:00",
-    "official": true
+    "official": true,
+    "domain": "kakao.com"
   },
   {
     "id": "i005",
@@ -647,7 +664,8 @@
     "tel": "1588-3820",
     "ars": "",
     "hours": "평일 09:00~18:00",
-    "official": true
+    "official": true,
+    "domain": "naver.com"
   },
   {
     "id": "i006",
@@ -667,7 +685,8 @@
     "tel": "1670-0862",
     "ars": "",
     "hours": "24시간",
-    "official": true
+    "official": true,
+    "domain": "baemin.com"
   },
   {
     "id": "i008",
@@ -697,7 +716,8 @@
     "tel": "1833-3114",
     "ars": "",
     "hours": "24시간",
-    "official": true
+    "official": true,
+    "domain": "kakao.com"
   },
   {
     "id": "d001",
@@ -707,7 +727,8 @@
     "tel": "1588-1255",
     "ars": "1→배송조회/2→분실",
     "hours": "평일 09:00~18:00",
-    "official": true
+    "official": true,
+    "domain": "cjlogistics.com"
   },
   {
     "id": "d002",
@@ -717,7 +738,8 @@
     "tel": "1588-0011",
     "ars": "",
     "hours": "평일 09:00~18:00",
-    "official": true
+    "official": true,
+    "domain": "hanjin.com"
   },
   {
     "id": "d003",
@@ -727,7 +749,8 @@
     "tel": "1588-2121",
     "ars": "",
     "hours": "평일 09:00~18:00",
-    "official": true
+    "official": true,
+    "domain": "lotteglogis.com"
   },
   {
     "id": "d004",
@@ -747,7 +770,8 @@
     "tel": "1588-1300",
     "ars": "",
     "hours": "평일 09:00~18:00",
-    "official": true
+    "official": true,
+    "domain": "epost.go.kr"
   },
   {
     "id": "d006",
@@ -837,7 +861,8 @@
     "tel": "1644-1107",
     "ars": "",
     "hours": "24시간",
-    "official": true
+    "official": true,
+    "domain": "kurly.com"
   },
   {
     "id": "a001",
@@ -847,7 +872,8 @@
     "tel": "1588-2001",
     "ars": "1→예약/2→마일리지",
     "hours": "24시간",
-    "official": true
+    "official": true,
+    "domain": "koreanair.com"
   },
   {
     "id": "a002",
@@ -857,7 +883,8 @@
     "tel": "1588-8000",
     "ars": "",
     "hours": "24시간",
-    "official": true
+    "official": true,
+    "domain": "flyasiana.com"
   },
   {
     "id": "a003",
@@ -867,7 +894,8 @@
     "tel": "1599-1500",
     "ars": "",
     "hours": "24시간",
-    "official": true
+    "official": true,
+    "domain": "jejuair.net"
   },
   {
     "id": "a004",
@@ -877,7 +905,8 @@
     "tel": "1600-6200",
     "ars": "",
     "hours": "24시간",
-    "official": true
+    "official": true,
+    "domain": "jinair.com"
   },
   {
     "id": "a005",
@@ -947,7 +976,8 @@
     "tel": "1588-8000",
     "ars": "1→긴급출동/2→서비스",
     "hours": "24시간(긴급)",
-    "official": true
+    "official": true,
+    "domain": "hyundai.com"
   },
   {
     "id": "au002",
@@ -957,7 +987,8 @@
     "tel": "1833-4000",
     "ars": "",
     "hours": "24시간(긴급)",
-    "official": true
+    "official": true,
+    "domain": "kia.com"
   },
   {
     "id": "au003",
@@ -977,7 +1008,8 @@
     "tel": "1600-3000",
     "ars": "",
     "hours": "평일 09:00~18:00",
-    "official": true
+    "official": true,
+    "domain": "bmw.com"
   },
   {
     "id": "au005",
@@ -987,7 +1019,8 @@
     "tel": "1800-1800",
     "ars": "",
     "hours": "24시간",
-    "official": true
+    "official": true,
+    "domain": "mercedes-benz.com"
   },
   {
     "id": "au006",
@@ -997,7 +1030,8 @@
     "tel": "080-799-8500",
     "ars": "",
     "hours": "평일 09:00~18:00",
-    "official": true
+    "official": true,
+    "domain": "audi.com"
   },
   {
     "id": "au007",
@@ -1007,7 +1041,8 @@
     "tel": "080-780-6780",
     "ars": "",
     "hours": "평일 09:00~18:00",
-    "official": true
+    "official": true,
+    "domain": "tesla.com"
   },
   {
     "id": "au008",
@@ -1017,7 +1052,8 @@
     "tel": "1588-0500",
     "ars": "",
     "hours": "평일 09:00~18:00",
-    "official": true
+    "official": true,
+    "domain": "toyota.com"
   },
   {
     "id": "au009",
@@ -1027,7 +1063,8 @@
     "tel": "080-600-6060",
     "ars": "",
     "hours": "평일 09:00~18:00",
-    "official": true
+    "official": true,
+    "domain": "volvocars.com"
   },
   {
     "id": "au010",
@@ -1077,7 +1114,8 @@
     "tel": "02-531-4500",
     "ars": "",
     "hours": "평일 09:00~18:00",
-    "official": true
+    "official": true,
+    "domain": "microsoft.com"
   },
   {
     "id": "fo005",
@@ -1087,7 +1125,8 @@
     "tel": "1600-1531",
     "ars": "",
     "hours": "평일 09:00~18:00",
-    "official": true
+    "official": true,
+    "domain": "google.com"
   },
   {
     "id": "fo006",
@@ -1197,7 +1236,8 @@
     "tel": "1600-5252",
     "ars": "",
     "hours": "24시간",
-    "official": true
+    "official": true,
+    "domain": "mcdonalds.com"
   },
   {
     "id": "fo017",
@@ -1207,7 +1247,8 @@
     "tel": "1599-0100",
     "ars": "",
     "hours": "평일 09:00~18:00",
-    "official": true
+    "official": true,
+    "domain": "burgerking.com"
   },
   {
     "id": "fo018",
@@ -1217,7 +1258,8 @@
     "tel": "1600-3654",
     "ars": "",
     "hours": "평일 09:00~18:00",
-    "official": true
+    "official": true,
+    "domain": "kfc.com"
   },
   {
     "id": "fo019",
@@ -1227,7 +1269,8 @@
     "tel": "1522-3232",
     "ars": "",
     "hours": "평일 07:00~22:00",
-    "official": true
+    "official": true,
+    "domain": "starbucks.com"
   },
   {
     "id": "r001",
@@ -1327,7 +1370,8 @@
     "tel": "1577-2595",
     "ars": "",
     "hours": "평일 09:00~18:00",
-    "official": true
+    "official": true,
+    "domain": "cj.net"
   },
   {
     "id": "fn002",
@@ -1337,7 +1381,8 @@
     "tel": "080-023-6565",
     "ars": "",
     "hours": "평일 09:00~18:00",
-    "official": true
+    "official": true,
+    "domain": "nongshim.com"
   },
   {
     "id": "fn003",
@@ -1347,7 +1392,8 @@
     "tel": "080-022-7751",
     "ars": "",
     "hours": "평일 09:00~18:00",
-    "official": true
+    "official": true,
+    "domain": "ottogi.co.kr"
   },
   {
     "id": "fn004",
@@ -1357,7 +1403,8 @@
     "tel": "1588-3252",
     "ars": "",
     "hours": "평일 09:00~18:00",
-    "official": true
+    "official": true,
+    "domain": "dongwonfnb.com"
   },
   {
     "id": "fn005",
@@ -2267,7 +2314,8 @@
     "tel": "1588-3366",
     "ars": "1→모바일/2→TV/3→가전/4→PC",
     "hours": "평일 09:00~18:00",
-    "official": true
+    "official": true,
+    "domain": "samsung.com"
   },
   {
     "id": "cg002",
@@ -2297,7 +2345,8 @@
     "tel": "1588-8900",
     "ars": "분실→1번",
     "hours": "24시간",
-    "official": true
+    "official": true,
+    "domain": "samsungcard.com"
   },
   {
     "id": "cg005",
@@ -2337,7 +2386,8 @@
     "tel": "1588-8000",
     "ars": "1→긴급출동/2→AS",
     "hours": "24시간(긴급)",
-    "official": true
+    "official": true,
+    "domain": "hyundai.com"
   },
   {
     "id": "cg009",
@@ -2377,7 +2427,8 @@
     "tel": "1544-7777",
     "ars": "1→가전/2→모바일/3→TV",
     "hours": "평일 09:00~18:00",
-    "official": true
+    "official": true,
+    "domain": "lg.com"
   },
   {
     "id": "cg013",
@@ -2397,7 +2448,8 @@
     "tel": "101",
     "ars": "0→상담원",
     "hours": "24시간",
-    "official": true
+    "official": true,
+    "domain": "uplus.co.kr"
   },
   {
     "id": "cg015",
@@ -2447,7 +2499,8 @@
     "tel": "1599-0011",
     "ars": "0→상담원",
     "hours": "24시간",
-    "official": true
+    "official": true,
+    "domain": "skt.co.kr"
   },
   {
     "id": "cg020",
@@ -2507,7 +2560,8 @@
     "tel": "1577-2595",
     "ars": "",
     "hours": "평일 09:00~18:00",
-    "official": true
+    "official": true,
+    "domain": "cj.net"
   },
   {
     "id": "cg026",
@@ -2517,7 +2571,8 @@
     "tel": "1588-1255",
     "ars": "1→배송조회",
     "hours": "평일 09:00~18:00",
-    "official": true
+    "official": true,
+    "domain": "cjlogistics.com"
   },
   {
     "id": "cg027",
@@ -2557,7 +2612,8 @@
     "tel": "100",
     "ars": "0→상담원",
     "hours": "24시간",
-    "official": true
+    "official": true,
+    "domain": "kt.com"
   },
   {
     "id": "cg031",
@@ -2567,7 +2623,8 @@
     "tel": "1588-7200",
     "ars": "",
     "hours": "24시간",
-    "official": true
+    "official": true,
+    "domain": "kt.com"
   },
   {
     "id": "fe001",
@@ -2667,7 +2724,8 @@
     "tel": "1600-1531",
     "ars": "",
     "hours": "평일 09:00~18:00",
-    "official": true
+    "official": true,
+    "domain": "google.com"
   },
   {
     "id": "fe011",
@@ -2717,7 +2775,8 @@
     "tel": "080-023-1234",
     "ars": "",
     "hours": "평일 10:00~18:00",
-    "official": true
+    "official": true,
+    "domain": "chanel.com"
   },
   {
     "id": "fe016",
@@ -2727,7 +2786,8 @@
     "tel": "1600-5252",
     "ars": "",
     "hours": "24시간",
-    "official": true
+    "official": true,
+    "domain": "mcdonalds.com"
   },
   {
     "id": "fe017",
@@ -2737,7 +2797,8 @@
     "tel": "1588-5588",
     "ars": "",
     "hours": "24시간",
-    "official": true
+    "official": true,
+    "domain": "pizzahut.com"
   },
   {
     "id": "fe018",
@@ -2747,7 +2808,8 @@
     "tel": "1588-3082",
     "ars": "",
     "hours": "24시간",
-    "official": true
+    "official": true,
+    "domain": "dominos.com"
   },
   {
     "id": "fe019",
@@ -3037,7 +3099,8 @@
     "tel": "1588-1880",
     "ars": "",
     "hours": "평일 09-18시",
-    "official": true
+    "official": true,
+    "domain": "kia.com"
   },
   {
     "id": "a112",
@@ -3377,7 +3440,8 @@
     "tel": "1600-5252",
     "ars": "",
     "hours": "24시간",
-    "official": true
+    "official": true,
+    "domain": "mcdonalds.com"
   },
   {
     "id": "f029",
@@ -3387,7 +3451,8 @@
     "tel": "1588-5700",
     "ars": "",
     "hours": "평일 09-18시",
-    "official": true
+    "official": true,
+    "domain": "lotteria.com"
   },
   {
     "id": "f030",
@@ -3397,7 +3462,8 @@
     "tel": "1599-0133",
     "ars": "",
     "hours": "평일 09-18시",
-    "official": true
+    "official": true,
+    "domain": "burgerking.com"
   },
   {
     "id": "f031",
@@ -3407,7 +3473,8 @@
     "tel": "1588-7771",
     "ars": "",
     "hours": "평일 09-18시",
-    "official": true
+    "official": true,
+    "domain": "kfc.com"
   },
   {
     "id": "f032",
@@ -3417,7 +3484,8 @@
     "tel": "1588-5588",
     "ars": "",
     "hours": "평일 09-18시",
-    "official": true
+    "official": true,
+    "domain": "pizzahut.com"
   },
   {
     "id": "f033",
@@ -3427,7 +3495,8 @@
     "tel": "1577-3082",
     "ars": "",
     "hours": "평일 09-18시",
-    "official": true
+    "official": true,
+    "domain": "dominos.com"
   },
   {
     "id": "f034",
@@ -3537,7 +3606,8 @@
     "tel": "1588-1255",
     "ars": "",
     "hours": "평일 09-18시",
-    "official": true
+    "official": true,
+    "domain": "cjlogistics.com"
   },
   {
     "id": "f045",
@@ -3547,7 +3617,8 @@
     "tel": "1644-1107",
     "ars": "",
     "hours": "24시간",
-    "official": true
+    "official": true,
+    "domain": "kurly.com"
   },
   {
     "id": "f046",
@@ -3557,7 +3628,8 @@
     "tel": "1577-9854",
     "ars": "",
     "hours": "24시간",
-    "official": true
+    "official": true,
+    "domain": "coupangeats.com"
   },
   {
     "id": "f047",
@@ -3567,7 +3639,8 @@
     "tel": "1544-0880",
     "ars": "",
     "hours": "24시간",
-    "official": true
+    "official": true,
+    "domain": "baemin.com"
   },
   {
     "id": "f048",
@@ -3607,7 +3680,8 @@
     "tel": "1588-3366",
     "ars": "",
     "hours": "평일 09-18시",
-    "official": true
+    "official": true,
+    "domain": "samsung.com"
   },
   {
     "id": "e202",
@@ -3617,7 +3691,8 @@
     "tel": "1544-7777",
     "ars": "",
     "hours": "평일 09-18시",
-    "official": true
+    "official": true,
+    "domain": "lg.com"
   },
   {
     "id": "e203",
@@ -3637,7 +3712,8 @@
     "tel": "080-333-4000",
     "ars": "",
     "hours": "평일 09-18시",
-    "official": true
+    "official": true,
+    "domain": "apple.com"
   },
   {
     "id": "e205",
@@ -3647,7 +3723,8 @@
     "tel": "080-333-4000",
     "ars": "",
     "hours": "24시간",
-    "official": true
+    "official": true,
+    "domain": "apple.com"
   },
   {
     "id": "e206",
@@ -3657,7 +3734,8 @@
     "tel": "1544-0010",
     "ars": "",
     "hours": "24시간",
-    "official": true
+    "official": true,
+    "domain": "uplus.co.kr"
   },
   {
     "id": "e207",
@@ -3767,7 +3845,8 @@
     "tel": "1588-0911",
     "ars": "",
     "hours": "평일 09-18시",
-    "official": true
+    "official": true,
+    "domain": "sony.com"
   },
   {
     "id": "e218",
@@ -3827,7 +3906,8 @@
     "tel": "1577-9700",
     "ars": "",
     "hours": "평일 09-18시",
-    "official": true
+    "official": true,
+    "domain": "microsoft.com"
   },
   {
     "id": "e224",
@@ -3847,7 +3927,8 @@
     "tel": "1588-0911",
     "ars": "",
     "hours": "평일 09-18시",
-    "official": true
+    "official": true,
+    "domain": "sony.com"
   },
   {
     "id": "e226",
@@ -3957,7 +4038,8 @@
     "tel": "080-022-2255",
     "ars": "",
     "hours": "평일 10-18시",
-    "official": true
+    "official": true,
+    "domain": "louisvuitton.com"
   },
   {
     "id": "lx002",
@@ -3967,7 +4049,8 @@
     "tel": "080-023-1234",
     "ars": "",
     "hours": "평일 10-18시",
-    "official": true
+    "official": true,
+    "domain": "chanel.com"
   },
   {
     "id": "lx003",
@@ -3977,7 +4060,8 @@
     "tel": "02-542-4454",
     "ars": "",
     "hours": "평일 10-18시",
-    "official": true
+    "official": true,
+    "domain": "hermes.com"
   },
   {
     "id": "lx004",
@@ -3987,7 +4071,8 @@
     "tel": "080-023-1234",
     "ars": "",
     "hours": "평일 10-18시",
-    "official": true
+    "official": true,
+    "domain": "gucci.com"
   },
   {
     "id": "lx005",
@@ -3997,7 +4082,8 @@
     "tel": "02-512-9977",
     "ars": "",
     "hours": "평일 10-18시",
-    "official": true
+    "official": true,
+    "domain": "prada.com"
   },
   {
     "id": "lx006",
@@ -4007,7 +4093,8 @@
     "tel": "080-023-5555",
     "ars": "",
     "hours": "평일 10-18시",
-    "official": true
+    "official": true,
+    "domain": "burberry.com"
   },
   {
     "id": "lx007",
@@ -4057,7 +4144,8 @@
     "tel": "080-022-3536",
     "ars": "",
     "hours": "평일 10-18시",
-    "official": true
+    "official": true,
+    "domain": "dior.com"
   },
   {
     "id": "lx012",
@@ -4097,7 +4185,8 @@
     "tel": "02-3445-5400",
     "ars": "",
     "hours": "평일 10-18시",
-    "official": true
+    "official": true,
+    "domain": "rolex.com"
   },
   {
     "id": "lx016",
@@ -4107,7 +4196,8 @@
     "tel": "080-023-0000",
     "ars": "",
     "hours": "평일 10-18시",
-    "official": true
+    "official": true,
+    "domain": "cartier.com"
   },
   {
     "id": "lx017",
@@ -4117,7 +4207,8 @@
     "tel": "080-022-0022",
     "ars": "",
     "hours": "평일 10-18시",
-    "official": true
+    "official": true,
+    "domain": "omegawatches.com"
   },
   {
     "id": "lx018",
@@ -4157,7 +4248,8 @@
     "tel": "080-022-8484",
     "ars": "",
     "hours": "평일 10-18시",
-    "official": true
+    "official": true,
+    "domain": "tiffany.com"
   },
   {
     "id": "lx022",
@@ -4637,7 +4729,8 @@
     "tel": "1577-1234",
     "ars": "",
     "hours": "평일 09-18시",
-    "official": true
+    "official": true,
+    "domain": "cj.net"
   },
   {
     "id": "f090",
@@ -4657,7 +4750,8 @@
     "tel": "1577-1234",
     "ars": "",
     "hours": "평일 09-18시",
-    "official": true
+    "official": true,
+    "domain": "cj.net"
   },
   {
     "id": "f092",
@@ -4667,7 +4761,8 @@
     "tel": "1577-1234",
     "ars": "",
     "hours": "평일 09-18시",
-    "official": true
+    "official": true,
+    "domain": "cj.net"
   },
   {
     "id": "f093",
@@ -4697,7 +4792,8 @@
     "tel": "080-024-5454",
     "ars": "",
     "hours": "평일 09-18시",
-    "official": true
+    "official": true,
+    "domain": "ottogi.co.kr"
   },
   {
     "id": "f096",
@@ -5017,7 +5113,8 @@
     "tel": "1588-3267",
     "ars": "",
     "hours": "평일 09-18시",
-    "official": true
+    "official": true,
+    "domain": "nongshim.com"
   },
   {
     "id": "f128",
@@ -5187,7 +5284,8 @@
     "tel": "1588-3820",
     "ars": "",
     "hours": "평일 09-18시",
-    "official": true
+    "official": true,
+    "domain": "naver.com"
   },
   {
     "id": "f145",
@@ -5327,7 +5425,8 @@
     "tel": "080-022-8266",
     "ars": "",
     "hours": "평일 10-18시",
-    "official": true
+    "official": true,
+    "domain": "tommy.com"
   },
   {
     "id": "lx034",
@@ -5337,7 +5436,8 @@
     "tel": "080-022-2525",
     "ars": "",
     "hours": "평일 10-18시",
-    "official": true
+    "official": true,
+    "domain": "calvinklein.com"
   },
   {
     "id": "lx035",
@@ -5347,7 +5447,8 @@
     "tel": "080-022-5227",
     "ars": "",
     "hours": "평일 10-18시",
-    "official": true
+    "official": true,
+    "domain": "lacoste.com"
   },
   {
     "id": "lx036",
@@ -5357,7 +5458,8 @@
     "tel": "080-022-7255",
     "ars": "",
     "hours": "평일 10-18시",
-    "official": true
+    "official": true,
+    "domain": "ralphlauren.com"
   },
   {
     "id": "lx037",
@@ -5547,7 +5649,8 @@
     "tel": "080-022-5865",
     "ars": "",
     "hours": "평일 09-18시",
-    "official": true
+    "official": true,
+    "domain": "prada.com"
   },
   {
     "id": "lx056",
