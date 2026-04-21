@@ -412,8 +412,8 @@
     </div>
   </div>
 
-  <!-- 카테고리 칩 -->
-  <div class="cat-row" id="catRow"></div>
+  <!-- 카테고리 칩 (전체 탭에서만 표시) -->
+  <div class="cat-row" id="catRow" style="display:flex"></div>
 
   <!-- 스크롤 영역 -->
   <div class="scroll-area" id="scrollArea">
@@ -559,6 +559,8 @@ function switchTab(tab) {
   currentTab = tab;
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
   document.getElementById('tab' + tab.charAt(0).toUpperCase() + tab.slice(1)).classList.add('active');
+  // 카테고리 칩: 전체 탭에서만 표시
+  document.getElementById('catRow').style.display = tab === 'all' ? 'flex' : 'none';
   renderList();
 }
 
